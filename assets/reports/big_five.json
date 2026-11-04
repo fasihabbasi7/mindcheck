@@ -1,0 +1,61 @@
+{
+  "id": "big_five",
+  "scoring": "traitProfile",
+  "levelLabels": {
+    "low": "Lower",
+    "moderate": "Moderate",
+    "high": "Higher"
+  },
+  "intro": "The Big Five describes personality as five broad dimensions. Your profile shows where your answers place you on each one, within the range of this questionnaire.",
+  "topSection": {
+    "title": "Your most pronounced traits",
+    "pick": "highest"
+  },
+  "focusSection": {
+    "title": "Your less pronounced traits",
+    "pick": "lowest"
+  },
+  "traits": {
+    "openness": {
+      "low": "You probably prefer the familiar and practical, and value proven ways of doing things. Others may see you as grounded and down to earth.",
+      "moderate": "You balance curiosity with practicality, enjoying new ideas when they feel useful or relevant.",
+      "high": "You are likely curious and imaginative, and drawn to ideas, art or new experiences. You may enjoy thinking about abstract questions.",
+      "reflect": "When did a new idea or experience last change how you see something?",
+      "tip": "Try one small new thing this week, such as a new route, recipe or kind of music, and notice how it feels."
+    },
+    "conscientiousness": {
+      "low": "You may prefer flexibility and spontaneity to strict plans, and can adapt quickly when things change. Deadlines and tidiness may take more effort.",
+      "moderate": "You can be organised when it matters while staying relaxed about the rest.",
+      "high": "You are likely dependable, organised and attentive to detail. You may feel uneasy when things are left unfinished.",
+      "reflect": "Which tasks feel easy for you to plan, and which do you tend to put off?",
+      "tip": "Give one recurring task a fixed time or place. Small structures go a long way."
+    },
+    "extraversion": {
+      "low": "You probably recharge in quieter settings and prefer deeper one-to-one conversations to large groups.",
+      "moderate": "You can enjoy both social time and solitude, adapting to the situation.",
+      "high": "You likely gain energy from people, conversation and activity, and feel comfortable taking the lead socially.",
+      "reflect": "After which kinds of social time do you feel energised, and after which drained?",
+      "tip": "Plan your week with your social energy in mind, leaving room to recharge in the way that suits you."
+    },
+    "agreeableness": {
+      "low": "You are likely direct and comfortable with disagreement, and may put honesty or results ahead of keeping the peace.",
+      "moderate": "You can be warm and cooperative while still standing your ground when it matters.",
+      "high": "You are likely warm, compassionate and attentive to how others feel. You may find conflict uncomfortable.",
+      "reflect": "When did you last put someone else's needs first, and how did it feel?",
+      "tip": "Notice one moment this week where you can balance kindness to others with kindness to yourself."
+    },
+    "emotional_stability": {
+      "low": "You may feel emotions strongly and notice stress, worry or mood changes more often. This sensitivity can also make you perceptive.",
+      "moderate": "You have ups and downs like most people and usually find your balance again.",
+      "high": "You are likely calm and steady under pressure, and difficult moments tend not to unsettle you for long.",
+      "reflect": "What helps you return to calm after a stressful day?",
+      "tip": "Build a small, reliable calming routine, such as a short walk or a few slow breaths, for stressful moments."
+    }
+  },
+  "suggestions": [
+    "No position on any trait is better or worse. Each one comes with its own strengths.",
+    "Personality is fairly stable, but it can shift gradually over the years.",
+    "Use your profile to understand your natural tendencies, not to limit yourself."
+  ],
+  "note": "Each trait score is the average of its 10 answers (reverse-worded questions flipped), shown on a 0–100 scale. Levels describe where you sit within the questionnaire's range, not a comparison with other people."
+}

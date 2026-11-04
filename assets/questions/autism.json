@@ -1,0 +1,315 @@
+{
+  "id": "autism",
+  "version": 1,
+  "instructions": "Read each statement and choose how much you agree with it. Think about how you usually are, across most situations. There are no right or wrong answers, and many people relate to some of these statements.",
+  "prompt": "How much do you agree?",
+  "scale": [
+    {
+      "value": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "value": 2,
+      "label": "Disagree"
+    },
+    {
+      "value": 3,
+      "label": "Neutral"
+    },
+    {
+      "value": 4,
+      "label": "Agree"
+    },
+    {
+      "value": 5,
+      "label": "Strongly agree"
+    }
+  ],
+  "traits": [
+    {
+      "id": "social_communication",
+      "name": "Social communication",
+      "description": "Reading hints, jokes and conversational cues."
+    },
+    {
+      "id": "social_interaction",
+      "name": "Social interaction",
+      "description": "How socialising feels and how much effort it takes."
+    },
+    {
+      "id": "sensory",
+      "name": "Sensory experiences",
+      "description": "Sensitivity to sound, light, texture and detail."
+    },
+    {
+      "id": "routines",
+      "name": "Routines",
+      "description": "Preference for predictability and how change feels."
+    },
+    {
+      "id": "repetitive",
+      "name": "Repetitive patterns",
+      "description": "Comforting repeated movements, habits and order."
+    },
+    {
+      "id": "interests",
+      "name": "Deep interests",
+      "description": "Intense, detailed focus on favourite topics."
+    },
+    {
+      "id": "communication",
+      "name": "Communication preferences",
+      "description": "Preferred ways of communicating and processing conversation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "aut_01",
+      "text": "I often find it hard to tell what someone means when they hint at something instead of saying it directly.",
+      "trait": "social_communication",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_02",
+      "text": "I can usually tell when someone is bored with what I am saying.",
+      "trait": "social_communication",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_03",
+      "text": "I sometimes take figures of speech or jokes literally before realising what was meant.",
+      "trait": "social_communication",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_04",
+      "text": "Small talk feels natural and easy for me.",
+      "trait": "social_communication",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_05",
+      "text": "I find it hard to know when it is my turn to speak in a conversation.",
+      "trait": "social_communication",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_06",
+      "text": "Socialising leaves me drained, even when I enjoyed it.",
+      "trait": "social_interaction",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_07",
+      "text": "I often feel I have to work out social rules that others seem to know automatically.",
+      "trait": "social_interaction",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_08",
+      "text": "I find it easy to make new friends.",
+      "trait": "social_interaction",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_09",
+      "text": "I sometimes copy how others behave so that I fit in.",
+      "trait": "social_interaction",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_10",
+      "text": "Joining a group conversation that has already started feels comfortable to me.",
+      "trait": "social_interaction",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_11",
+      "text": "Certain sounds that others barely notice feel overwhelming to me.",
+      "trait": "sensory",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_12",
+      "text": "Bright lights or flickering screens bother me more than they seem to bother others.",
+      "trait": "sensory",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_13",
+      "text": "Some clothing textures or labels are so uncomfortable that I avoid them.",
+      "trait": "sensory",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_14",
+      "text": "Busy, noisy places do not bother me.",
+      "trait": "sensory",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_15",
+      "text": "I notice small details, such as patterns or sounds, that other people miss.",
+      "trait": "sensory",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_16",
+      "text": "I feel uneasy when my daily routine is unexpectedly changed.",
+      "trait": "routines",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_17",
+      "text": "I like to know exactly what will happen before I go somewhere new.",
+      "trait": "routines",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_18",
+      "text": "I enjoy spontaneous, last-minute plans.",
+      "trait": "routines",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_19",
+      "text": "I prefer to do things the same way each time.",
+      "trait": "routines",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_20",
+      "text": "Unexpected changes of plan leave me unsettled for a long time.",
+      "trait": "routines",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_21",
+      "text": "I have movements or habits, such as tapping or rocking, that help me feel calm.",
+      "trait": "repetitive",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_22",
+      "text": "I like to rewatch, reread or relisten to the same things many times.",
+      "trait": "repetitive",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_23",
+      "text": "I rarely repeat the same actions or phrases to myself.",
+      "trait": "repetitive",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_24",
+      "text": "I find comfort in arranging things in a particular order.",
+      "trait": "repetitive",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_25",
+      "text": "I sometimes repeat words or phrases in my head because they feel satisfying.",
+      "trait": "repetitive",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_26",
+      "text": "I have interests that I explore in great depth and detail.",
+      "trait": "interests",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_27",
+      "text": "I can spend hours on a favourite topic and lose track of time.",
+      "trait": "interests",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_28",
+      "text": "My interests tend to change quickly from one thing to another.",
+      "trait": "interests",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_29",
+      "text": "I enjoy collecting facts or information about specific subjects.",
+      "trait": "interests",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_30",
+      "text": "I find it hard to stop talking about a topic that fascinates me.",
+      "trait": "interests",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_31",
+      "text": "I prefer written messages to phone calls.",
+      "trait": "communication",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_32",
+      "text": "I prefer people to say exactly what they mean.",
+      "trait": "communication",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_33",
+      "text": "Making eye contact during a conversation feels natural to me.",
+      "trait": "communication",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_34",
+      "text": "I need extra time to process what someone has said before I reply.",
+      "trait": "communication",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "aut_35",
+      "text": "I find it easy to read people's tone of voice.",
+      "trait": "communication",
+      "reverse": true,
+      "source": "MindCheck"
+    }
+  ],
+  "sources": [
+    "Original self-reflection questions written for MindCheck. Not adapted from, and not equivalent to, any validated autism screening instrument."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "self_compassion",
+  "scoring": "tendencyIndex",
+  "levelLabels": {
+    "low": "Rarely",
+    "moderate": "Sometimes",
+    "high": "Often"
+  },
+  "overallLabel": "Self-compassion score",
+  "bands": [
+    {
+      "min": 0,
+      "max": 37.5,
+      "title": "Room to grow kinder",
+      "summary": "Your answers suggest you are often hard on yourself when things go wrong. Self-compassion is a skill, and it can be learned."
+    },
+    {
+      "min": 37.5,
+      "max": 62.5,
+      "title": "Moderate self-compassion",
+      "summary": "Your answers suggest you are sometimes kind to yourself in hard moments, and sometimes self-critical."
+    },
+    {
+      "min": 62.5,
+      "max": 100,
+      "title": "Higher self-compassion",
+      "summary": "Your answers suggest you usually meet your own struggles with warmth, balance and understanding."
+    }
+  ],
+  "topSection": {
+    "title": "Where you score highest",
+    "pick": "highest"
+  },
+  "focusSection": {
+    "title": "Where you score lowest",
+    "pick": "lowest"
+  },
+  "traits": {
+    "self_kindness": {
+      "low": "Being gentle with yourself in hard moments doesn't come easily right now.",
+      "moderate": "You can be kind to yourself, though not always when it matters most.",
+      "high": "You tend to treat yourself with warmth when you are struggling.",
+      "reflect": "What would you say to a close friend in your situation?",
+      "tip": "Next time you slip up, put a hand on your heart and speak to yourself as you would to a friend."
+    },
+    "self_judgment": {
+      "low": "You rarely turn harshly on yourself.",
+      "moderate": "Your inner critic shows up now and then, especially after setbacks.",
+      "high": "Your inner critic seems loud and frequent at the moment.",
+      "reflect": "Whose voice does your inner critic sound like?",
+      "tip": "When you notice harsh self-talk, try rephrasing it in a calmer, more supportive tone."
+    },
+    "common_humanity": {
+      "low": "When things go wrong, it can feel as if it only happens to you.",
+      "moderate": "You sometimes remember that everyone struggles, though not always.",
+      "high": "You tend to see your difficulties as part of being human.",
+      "reflect": "Who else might be feeling the way you feel right now?",
+      "tip": "When you struggle, remind yourself: \"This is part of life, and others feel this too.\""
+    },
+    "isolation": {
+      "low": "Hard times rarely leave you feeling cut off from others.",
+      "moderate": "Difficult moments sometimes make you feel alone.",
+      "high": "When you are struggling, you often feel alone or separate from others.",
+      "reflect": "When you feel alone with a problem, who could you share it with?",
+      "tip": "Reach out to one person this week and share something real, even something small."
+    },
+    "mindfulness": {
+      "low": "Painful feelings can be hard to hold in balance right now.",
+      "moderate": "You can sometimes take a step back from painful feelings.",
+      "high": "You tend to notice painful feelings without being overwhelmed by them.",
+      "reflect": "What helps you pause before reacting to a painful feeling?",
+      "tip": "Try naming the feeling (\"this is disappointment\") and taking three slow breaths."
+    },
+    "over_identification": {
+      "low": "You rarely get swept away by painful thoughts.",
+      "moderate": "Painful thoughts sometimes take over for a while.",
+      "high": "Painful thoughts and feelings often seem to sweep you away.",
+      "reflect": "What tends to pull you into replaying a painful moment?",
+      "tip": "When you notice yourself spiralling, try a short walk or a change of scene to reset."
+    }
+  },
+  "suggestions": [
+    "Self-compassion is not self-pity or letting yourself off the hook. Research links it with motivation and resilience.",
+    "Small daily practices, such as a kind phrase to yourself, can shift your inner voice over time.",
+    "A short self-compassion break when things feel hard: notice the pain, remember others feel it too, offer yourself kindness."
+  ],
+  "note": "Self-judgment, Isolation and Over-identification are counted in reverse, so lower scores there raise your overall result. Your score is the average of the six areas on a 0–100 scale. On Neff's original 1–5 scale this equals 1 + score × 4 ÷ 100. Neff gives 1–2.5 as low, 2.5–3.5 as moderate and 3.5–5 as high, as a rough guide only."
+}

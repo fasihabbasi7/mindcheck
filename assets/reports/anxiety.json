@@ -1,0 +1,99 @@
+{
+  "id": "anxiety",
+  "scoring": "average",
+  "levelLabels": {
+    "low": "Rarely",
+    "moderate": "Sometimes",
+    "high": "Often"
+  },
+  "overallLabel": "Anxiety-related score",
+  "bands": [
+    {
+      "min": 0,
+      "max": 25,
+      "title": "Rarely bothered",
+      "summary": "Your answers suggest anxiety-related experiences have rarely bothered you over the last two weeks."
+    },
+    {
+      "min": 25,
+      "max": 50,
+      "title": "Sometimes bothered",
+      "summary": "Your answers suggest worry, tension or nervousness have sometimes bothered you recently."
+    },
+    {
+      "min": 50,
+      "max": 75,
+      "title": "Often bothered",
+      "summary": "Your answers suggest anxiety-related experiences have often affected you over the last two weeks."
+    },
+    {
+      "min": 75,
+      "max": 100,
+      "title": "Very often bothered",
+      "summary": "Your answers suggest anxiety-related experiences have affected you on most days recently."
+    }
+  ],
+  "topSection": {
+    "title": "Areas that bother you most",
+    "pick": "highest"
+  },
+  "focusSection": {
+    "title": "Areas that bother you least",
+    "pick": "lowest"
+  },
+  "support": {
+    "when": "above",
+    "threshold": 50,
+    "text": "If worry or nervousness is affecting your daily life, sleep or relationships, consider speaking with a doctor or mental health professional. You don't have to manage it alone."
+  },
+  "traits": {
+    "worry": {
+      "low": "Worry and overthinking rarely take over your thoughts.",
+      "moderate": "Worry and overthinking show up sometimes, often around particular situations.",
+      "high": "Worrying and replaying things in your mind seem to take up a lot of your time.",
+      "reflect": "Which worries come back most often, and are they within your control?",
+      "tip": "Try setting a short \"worry time\" each day and postponing worries until then."
+    },
+    "nervousness": {
+      "low": "You rarely feel on edge in everyday situations.",
+      "moderate": "You sometimes feel nervous or uneasy, often in particular situations.",
+      "high": "Feeling on edge or uneasy seems to happen often for you.",
+      "reflect": "In which situations do you feel most on edge?",
+      "tip": "Before a nerve-racking task, try slow breathing: in for 4, out for 6, a few times."
+    },
+    "tension": {
+      "low": "Stress rarely shows up in your body.",
+      "moderate": "Stress sometimes shows up as tension, aches or a racing heart.",
+      "high": "Stress often shows up physically, such as tight muscles, headaches or a racing heart.",
+      "reflect": "Where in your body do you notice stress first?",
+      "tip": "A few minutes of stretching, or relaxing your shoulders and jaw, can ease built-up tension."
+    },
+    "relaxing": {
+      "low": "You can usually switch off and settle.",
+      "moderate": "Relaxing is sometimes hard, especially when you are busy.",
+      "high": "Switching off, resting or sleeping seems difficult for you at the moment.",
+      "reflect": "What genuinely helps you unwind?",
+      "tip": "Create a short, screen-free wind-down routine before bed."
+    },
+    "apprehension": {
+      "low": "You rarely expect the worst.",
+      "moderate": "You sometimes worry that something bad will happen.",
+      "high": "A sense of dread or expecting bad news seems to visit you often.",
+      "reflect": "When you expect the worst, how often does it actually happen?",
+      "tip": "When dread appears, name it (\"this is anxiety talking\") and focus on the next small step."
+    },
+    "stress": {
+      "low": "Stress rarely affects your mood or focus.",
+      "moderate": "Stress sometimes leaves you irritable, overwhelmed or distracted.",
+      "high": "Stress often affects your mood, patience and concentration.",
+      "reflect": "What are the early signs that stress is building up for you?",
+      "tip": "Break overwhelming tasks into the smallest possible next step."
+    }
+  },
+  "suggestions": [
+    "Regular movement, enough sleep and time outdoors all support a calmer body and mind.",
+    "Talking about worries with someone you trust can make them feel smaller.",
+    "Notice patterns: when, where and around whom anxiety shows up most."
+  ],
+  "note": "Your score is the average of all 25 answers, shown on a 0–100 scale (0 = not at all, 100 = nearly every day). It combines the 7 GAD-7 questions with 18 MindCheck questions, so it is not a GAD-7 score and cannot indicate an anxiety disorder."
+}

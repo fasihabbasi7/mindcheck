@@ -1,0 +1,239 @@
+{
+  "id": "adhd",
+  "version": 2,
+  "instructions": "Check the answer that best describes how you have felt and conducted yourself over the past 6 months. Questions 1-6 are the official ASRS v1.1 screener (intended for people aged 18 or older). Questions 7-20 are extra MindCheck questions about everyday patterns; they give you a separate profile and do not change the screener score.",
+  "prompt": "Over the past 6 months:",
+  "scale": [
+    {
+      "value": 0,
+      "label": "Never"
+    },
+    {
+      "value": 1,
+      "label": "Rarely"
+    },
+    {
+      "value": 2,
+      "label": "Sometimes"
+    },
+    {
+      "value": 3,
+      "label": "Often"
+    },
+    {
+      "value": 4,
+      "label": "Very often"
+    }
+  ],
+  "traits": [
+    {
+      "id": "inattention",
+      "name": "Attention & organisation",
+      "description": "Finishing, organising, remembering and starting tasks."
+    },
+    {
+      "id": "hyperactivity",
+      "name": "Restlessness & activity",
+      "description": "Fidgeting and feeling driven to keep moving."
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "description": "Staying with one thing when attention drifts or distractions appear."
+    },
+    {
+      "id": "organisation",
+      "name": "Organisation",
+      "description": "Keeping track of belongings, spaces and routine steps."
+    },
+    {
+      "id": "time_management",
+      "name": "Time management",
+      "description": "Estimating time, being on time and avoiding last-minute rushes."
+    },
+    {
+      "id": "impulsivity",
+      "name": "Impulsivity",
+      "description": "Acting or speaking before pausing to think."
+    },
+    {
+      "id": "restlessness",
+      "name": "Everyday restlessness",
+      "description": "Needing to move or finding quiet time hard."
+    }
+  ],
+  "questions": [
+    {
+      "id": "adhd_01",
+      "text": "How often do you have trouble wrapping up the final details of a project, once the challenging parts have been done?",
+      "trait": "inattention",
+      "reverse": false,
+      "source": "ASRS v1.1",
+      "shadedFromValue": 2,
+      "section": "Part 1 · ASRS screener"
+    },
+    {
+      "id": "adhd_02",
+      "text": "How often do you have difficulty getting things in order when you have to do a task that requires organization?",
+      "trait": "inattention",
+      "reverse": false,
+      "source": "ASRS v1.1",
+      "shadedFromValue": 2,
+      "section": "Part 1 · ASRS screener"
+    },
+    {
+      "id": "adhd_03",
+      "text": "How often do you have problems remembering appointments or obligations?",
+      "trait": "inattention",
+      "reverse": false,
+      "source": "ASRS v1.1",
+      "shadedFromValue": 2,
+      "section": "Part 1 · ASRS screener"
+    },
+    {
+      "id": "adhd_04",
+      "text": "When you have a task that requires a lot of thought, how often do you avoid or delay getting started?",
+      "trait": "inattention",
+      "reverse": false,
+      "source": "ASRS v1.1",
+      "shadedFromValue": 3,
+      "section": "Part 1 · ASRS screener"
+    },
+    {
+      "id": "adhd_05",
+      "text": "How often do you fidget or squirm with your hands or feet when you have to sit down for a long time?",
+      "trait": "hyperactivity",
+      "reverse": false,
+      "source": "ASRS v1.1",
+      "shadedFromValue": 3,
+      "section": "Part 1 · ASRS screener"
+    },
+    {
+      "id": "adhd_06",
+      "text": "How often do you feel overly active and compelled to do things, like you were driven by a motor?",
+      "trait": "hyperactivity",
+      "reverse": false,
+      "source": "ASRS v1.1",
+      "shadedFromValue": 3,
+      "section": "Part 1 · ASRS screener"
+    },
+    {
+      "id": "adhd_07",
+      "text": "How often does your mind wander during conversations or reading, even when you want to pay attention?",
+      "trait": "focus",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_08",
+      "text": "How often do you get distracted by things around you, such as sounds or notifications?",
+      "trait": "focus",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_09",
+      "text": "How often do you start several tasks without finishing them?",
+      "trait": "focus",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_10",
+      "text": "How often do you misplace everyday items like keys, your phone or documents?",
+      "trait": "organisation",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_11",
+      "text": "How often does your room or workspace become cluttered faster than you can keep up with?",
+      "trait": "organisation",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_12",
+      "text": "How often do you forget steps in routine tasks?",
+      "trait": "organisation",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_13",
+      "text": "How often do you underestimate how long something will take?",
+      "trait": "time_management",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_14",
+      "text": "How often are you late, even when you planned to be on time?",
+      "trait": "time_management",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_15",
+      "text": "How often do you leave important tasks until the last minute?",
+      "trait": "time_management",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_16",
+      "text": "How often do you interrupt others or finish their sentences?",
+      "trait": "impulsivity",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_17",
+      "text": "How often do you make decisions or purchases on impulse that you later regret?",
+      "trait": "impulsivity",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_18",
+      "text": "How often do you find it hard to wait your turn, for example in queues or conversations?",
+      "trait": "impulsivity",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_19",
+      "text": "How often do you feel restless or find it hard to relax during quiet time?",
+      "trait": "restlessness",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    },
+    {
+      "id": "adhd_20",
+      "text": "How often do you need to keep moving, such as tapping, pacing or shifting position?",
+      "trait": "restlessness",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Everyday patterns"
+    }
+  ],
+  "sources": [
+    "Adult ADHD Self-Report Scale (ASRS v1.1) Screener. Kessler, R. C., et al. (2005). Psychological Medicine, 35(2), 245-256.",
+    "Copyright © New York University and President and Fellows of Harvard College. All rights reserved.",
+    "Shaded answers follow the official form. Scoring follows the Harvard 2024 update (Never = 0 to Very often = 4, total 0-24).",
+    "Questions 7-20: written for MindCheck. Scored separately; they never change the ASRS screener score."
+  ]
+}

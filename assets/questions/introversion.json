@@ -1,0 +1,180 @@
+{
+  "id": "introversion",
+  "version": 1,
+  "instructions": "Describe yourself as you generally are now, not as you wish to be in the future. Answer as you honestly see yourself, compared with other people you know of roughly your age. There are no right or wrong answers.",
+  "prompt": "How accurately does this describe you?",
+  "scale": [
+    {
+      "value": 1,
+      "label": "Very inaccurate"
+    },
+    {
+      "value": 2,
+      "label": "Moderately inaccurate"
+    },
+    {
+      "value": 3,
+      "label": "Neither accurate nor inaccurate"
+    },
+    {
+      "value": 4,
+      "label": "Moderately accurate"
+    },
+    {
+      "value": 5,
+      "label": "Very accurate"
+    }
+  ],
+  "traits": [
+    {
+      "id": "extraversion",
+      "name": "Extraversion",
+      "description": "Higher scores lean towards extroversion; lower scores lean towards introversion."
+    }
+  ],
+  "questions": [
+    {
+      "id": "ie_01",
+      "text": "I am the life of the party.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_02",
+      "text": "I often feel uncomfortable around others.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_03",
+      "text": "I feel comfortable around people.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_04",
+      "text": "I keep in the background.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_05",
+      "text": "I start conversations.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_06",
+      "text": "I have little to say.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_07",
+      "text": "I talk to a lot of different people at parties.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_08",
+      "text": "I don't like to draw attention to myself.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_09",
+      "text": "I don't mind being the center of attention.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_10",
+      "text": "I am quiet around strangers.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_11",
+      "text": "I make friends easily.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_12",
+      "text": "I find it difficult to approach others.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_13",
+      "text": "I take charge.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_14",
+      "text": "I don't talk a lot.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_15",
+      "text": "I know how to captivate people.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_16",
+      "text": "I bottle up my feelings.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_17",
+      "text": "I feel at ease with people.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_18",
+      "text": "I am a very private person.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_19",
+      "text": "I wait for others to lead the way.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "ie_20",
+      "text": "I am skilled in handling social situations.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    }
+  ],
+  "sources": [
+    "IPIP Big-Five Factor Markers, 100-item version, Factor I (Extraversion) 20-item scale. Goldberg, L. R. (1992). Psychological Assessment, 4, 26-42. International Personality Item Pool (ipip.ori.org), public domain. Items shown in first person."
+  ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MindCheck launch screen (dark mode): soft background shown while
+     the app starts. The Flutter splash screen takes over right after. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="#13121F" />
+    </item>
+</layer-list>

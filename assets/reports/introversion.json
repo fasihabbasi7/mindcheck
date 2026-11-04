@@ -1,0 +1,90 @@
+{
+  "id": "introversion",
+  "scoring": "spectrum",
+  "levelLabels": {
+    "low": "Lower",
+    "moderate": "Moderate",
+    "high": "Higher"
+  },
+  "overallLabel": "Towards extroversion",
+  "spectrum": {
+    "left": "Introvert",
+    "right": "Extrovert"
+  },
+  "bands": [
+    {
+      "min": 0,
+      "max": 20,
+      "title": "Strongly introverted",
+      "summary": "Your answers suggest you strongly prefer quieter, calmer settings and recharge best with time alone or with a few close people.",
+      "strengths": [
+        "Deep focus",
+        "Thoughtful listening",
+        "Close, meaningful friendships"
+      ]
+    },
+    {
+      "min": 20,
+      "max": 40,
+      "title": "Leans introverted",
+      "summary": "You likely enjoy people in smaller doses and value time on your own to recharge.",
+      "strengths": [
+        "Reflection before speaking",
+        "Listening carefully",
+        "Comfort with your own company"
+      ]
+    },
+    {
+      "min": 40,
+      "max": 60,
+      "title": "Ambivert",
+      "summary": "You sit near the middle of the spectrum and can draw energy from both social time and solitude, depending on the situation.",
+      "strengths": [
+        "Adaptability",
+        "Reading the room",
+        "Comfort in many settings"
+      ]
+    },
+    {
+      "min": 60,
+      "max": 80,
+      "title": "Leans extroverted",
+      "summary": "You likely enjoy company and conversation, and often feel energised by being around others.",
+      "strengths": [
+        "Starting conversations",
+        "Bringing people together",
+        "Energy in groups"
+      ]
+    },
+    {
+      "min": 80,
+      "max": 100,
+      "title": "Strongly extroverted",
+      "summary": "Your answers suggest you thrive on social energy and activity, and on being around people.",
+      "strengths": [
+        "Energising others",
+        "Confidence in social settings",
+        "Building wide networks"
+      ]
+    }
+  ],
+  "topSection": {
+    "title": "What this means for you",
+    "pick": "highest"
+  },
+  "traits": {
+    "extraversion": {
+      "low": "You probably recharge in quieter settings and prefer deeper one-to-one conversations to large groups.",
+      "moderate": "You can enjoy both social time and solitude, adapting to the situation.",
+      "high": "You likely gain energy from people, conversation and activity, and feel comfortable taking the lead socially.",
+      "reflect": "After which kinds of social time do you feel energised, and after which drained?",
+      "tip": "Plan your week with your social energy in mind, leaving room to recharge in the way that suits you."
+    }
+  },
+  "suggestions": [
+    "Neither introversion nor extroversion is better. Each has its own strengths.",
+    "Notice which settings leave you energised, and plan more of them.",
+    "Protect your recharge time, whether that means quiet time alone or time with friends."
+  ],
+  "note": "Your position is the average of 20 answers (reverse-worded questions flipped), shown on a 0–100 scale where 0 is the introverted end and 100 the extroverted end."
+}

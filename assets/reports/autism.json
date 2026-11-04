@@ -1,0 +1,100 @@
+{
+  "id": "autism",
+  "scoring": "average",
+  "levelLabels": {
+    "low": "Few",
+    "moderate": "Some",
+    "high": "Many"
+  },
+  "overallLabel": "Self-reported traits",
+  "bands": [
+    {
+      "min": 0,
+      "max": 35,
+      "title": "Fewer of these traits",
+      "summary": "You related to relatively few of the autism-related experiences described in this reflection."
+    },
+    {
+      "min": 35,
+      "max": 65,
+      "title": "Some of these traits",
+      "summary": "You related to some of the experiences described, which is common for many people."
+    },
+    {
+      "min": 65,
+      "max": 100,
+      "title": "Many of these traits",
+      "summary": "You related to many of the experiences described. This reflection cannot screen for autism, but if these experiences resonate and affect your daily life, a qualified professional can offer a proper assessment."
+    }
+  ],
+  "topSection": {
+    "title": "Traits you relate to most",
+    "pick": "highest"
+  },
+  "focusSection": {
+    "title": "Traits you relate to least",
+    "pick": "lowest"
+  },
+  "support": {
+    "when": "above",
+    "threshold": 65,
+    "text": "If you are wondering whether you might be autistic, a specialist assessment is the only way to know. Many people also find resources written by autistic people helpful."
+  },
+  "traits": {
+    "social_communication": {
+      "low": "Picking up hints, jokes and conversational cues tends to come easily to you.",
+      "moderate": "Some unspoken social cues are easy for you, while others take more effort.",
+      "high": "You often find hints, implied meanings or conversational turn-taking hard to read.",
+      "reflect": "In which conversations do you feel most at ease, and why?",
+      "tip": "It's okay to ask people to say what they mean directly. Many people appreciate clarity."
+    },
+    "social_interaction": {
+      "low": "Socialising generally feels natural and not especially draining.",
+      "moderate": "Social time is enjoyable at times but can also take effort.",
+      "high": "Social situations often take a lot of energy or feel like they follow hidden rules.",
+      "reflect": "What kind of social time feels good to you, and what leaves you drained?",
+      "tip": "Plan recovery time after social events, and choose settings that suit you."
+    },
+    "sensory": {
+      "low": "Sounds, lights and textures rarely bother you.",
+      "moderate": "Some sensory experiences bother you in certain situations.",
+      "high": "You notice sounds, lights, textures or details more intensely than others seem to.",
+      "reflect": "Which environments feel most comfortable for your senses?",
+      "tip": "Noise-reducing headphones or softer lighting can make busy places easier."
+    },
+    "routines": {
+      "low": "You adapt easily to change and enjoy spontaneity.",
+      "moderate": "You like some predictability but can handle change.",
+      "high": "Predictability matters a lot to you, and unexpected changes can feel unsettling.",
+      "reflect": "Which routines help you feel most grounded?",
+      "tip": "When change is coming, a simple plan or visual schedule can help."
+    },
+    "repetitive": {
+      "low": "Repetitive habits don't play a big role for you.",
+      "moderate": "Some repeated activities or habits bring you comfort.",
+      "high": "Repeated movements, habits, order or familiar media are an important source of comfort for you.",
+      "reflect": "Which repeated habits help you feel calm?",
+      "tip": "Comforting repetitive habits are a valid way to settle yourself."
+    },
+    "interests": {
+      "low": "Your interests tend to be broad and changing.",
+      "moderate": "You have some interests you enjoy exploring in depth.",
+      "high": "You have deep, intense interests that can absorb you for hours.",
+      "reflect": "Which interests have stayed with you the longest?",
+      "tip": "Deep interests can be a real strength. Look for communities that share them."
+    },
+    "communication": {
+      "low": "You are comfortable with most ways of communicating.",
+      "moderate": "You have some preferences about how you communicate.",
+      "high": "You have clear communication preferences, such as directness, written messages or time to process.",
+      "reflect": "Which ways of communicating feel easiest for you?",
+      "tip": "Let people know your preferences, for example by asking for a message instead of a call."
+    }
+  },
+  "suggestions": [
+    "Many people, autistic or not, relate to some of these experiences.",
+    "Understanding your preferences can help you shape environments that suit you.",
+    "Only a specialist assessment can identify autism. This reflection cannot."
+  ],
+  "note": "Your score is the average of all 35 answers (reverse-worded questions flipped), shown on a 0–100 scale. These are MindCheck self-reflection questions. They are not validated and the score cannot indicate autism."
+}

@@ -1,0 +1,356 @@
+{
+  "id": "narcissism",
+  "version": 1,
+  "instructions": "Read each statement and choose how much you agree with it. Think about how you usually are, across most situations. There are no right or wrong answers, and many people relate to some of these statements.",
+  "prompt": "How much do you agree?",
+  "scale": [
+    {
+      "value": 1,
+      "label": "Strongly disagree"
+    },
+    {
+      "value": 2,
+      "label": "Disagree"
+    },
+    {
+      "value": 3,
+      "label": "Neutral"
+    },
+    {
+      "value": 4,
+      "label": "Agree"
+    },
+    {
+      "value": 5,
+      "label": "Strongly agree"
+    }
+  ],
+  "traits": [
+    {
+      "id": "self_importance",
+      "name": "Self-importance",
+      "description": "Seeing yourself as more special or talented than others."
+    },
+    {
+      "id": "admiration",
+      "name": "Need for admiration",
+      "description": "How much praise and admiration matter to how you feel."
+    },
+    {
+      "id": "attention",
+      "name": "Attention-seeking",
+      "description": "Wanting to be noticed and at the centre of things."
+    },
+    {
+      "id": "entitlement",
+      "name": "Entitlement",
+      "description": "Expecting special treatment or favours."
+    },
+    {
+      "id": "criticism",
+      "name": "Sensitivity to criticism",
+      "description": "How strongly criticism and disagreement affect you."
+    },
+    {
+      "id": "empathy",
+      "name": "Empathy",
+      "description": "Tuning in to and caring about others' feelings. Higher means more empathy.",
+      "inverse": true
+    },
+    {
+      "id": "competition",
+      "name": "Competitiveness",
+      "description": "Needing to win and outperform others."
+    },
+    {
+      "id": "recognition",
+      "name": "Recognition-seeking",
+      "description": "Wanting credit and acknowledgement for what you do."
+    }
+  ],
+  "questions": [
+    {
+      "id": "nar_01",
+      "text": "I believe I am more talented than most people around me.",
+      "trait": "self_importance",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_02",
+      "text": "I think of myself as a fairly ordinary person.",
+      "trait": "self_importance",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_03",
+      "text": "I feel destined for something bigger than an ordinary life.",
+      "trait": "self_importance",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_04",
+      "text": "My ideas are usually better than other people's.",
+      "trait": "self_importance",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_05",
+      "text": "I see my achievements as no more special than anyone else's.",
+      "trait": "self_importance",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_06",
+      "text": "I feel my best when people tell me how impressive I am.",
+      "trait": "admiration",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_07",
+      "text": "I rarely need praise to feel good about myself.",
+      "trait": "admiration",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_08",
+      "text": "I notice when others do not compliment me as much as I deserve.",
+      "trait": "admiration",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_09",
+      "text": "I enjoy hearing people talk about my accomplishments.",
+      "trait": "admiration",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_10",
+      "text": "Compliments make me feel a little uncomfortable.",
+      "trait": "admiration",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_11",
+      "text": "I like being the centre of attention in a group.",
+      "trait": "attention",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_12",
+      "text": "I dress or act in ways that make people notice me.",
+      "trait": "attention",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_13",
+      "text": "I am happy to let others take the spotlight.",
+      "trait": "attention",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_14",
+      "text": "I get bored when conversations are not about me.",
+      "trait": "attention",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_15",
+      "text": "I often steer conversations towards my own experiences.",
+      "trait": "attention",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_16",
+      "text": "I deserve special treatment because of who I am.",
+      "trait": "entitlement",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_17",
+      "text": "I get annoyed when I have to wait like everyone else.",
+      "trait": "entitlement",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_18",
+      "text": "I expect others to do favours for me without needing much in return.",
+      "trait": "entitlement",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_19",
+      "text": "I am happy to take my turn and wait in line.",
+      "trait": "entitlement",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_20",
+      "text": "I believe people owe me more than I currently receive.",
+      "trait": "entitlement",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_21",
+      "text": "Even mild criticism stings for a long time.",
+      "trait": "criticism",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_22",
+      "text": "When someone criticises me, I quickly find reasons why they are wrong.",
+      "trait": "criticism",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_23",
+      "text": "I can take feedback calmly and learn from it.",
+      "trait": "criticism",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_24",
+      "text": "I feel humiliated when someone points out my mistakes in front of others.",
+      "trait": "criticism",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_25",
+      "text": "I sometimes become angry when people disagree with me.",
+      "trait": "criticism",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_26",
+      "text": "I can easily imagine how other people are feeling.",
+      "trait": "empathy",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_27",
+      "text": "I make time to listen when friends have problems.",
+      "trait": "empathy",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_28",
+      "text": "Other people's feelings are not really my concern.",
+      "trait": "empathy",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_29",
+      "text": "I feel moved when I see someone else struggling.",
+      "trait": "empathy",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_30",
+      "text": "I find it tiresome when people talk about their problems.",
+      "trait": "empathy",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_31",
+      "text": "I need to win, even in casual games.",
+      "trait": "competition",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_32",
+      "text": "I feel uneasy when someone close to me is more successful than I am.",
+      "trait": "competition",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_33",
+      "text": "I compare my achievements with others to see who is ahead.",
+      "trait": "competition",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_34",
+      "text": "I am genuinely glad when others do better than me.",
+      "trait": "competition",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_35",
+      "text": "I will go to great lengths to outperform others.",
+      "trait": "competition",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_36",
+      "text": "I want people to know about the things I have achieved.",
+      "trait": "recognition",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_37",
+      "text": "I am content when my good work goes unnoticed.",
+      "trait": "recognition",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_38",
+      "text": "I would like to be famous or widely admired.",
+      "trait": "recognition",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_39",
+      "text": "I make sure others know when I have done something well.",
+      "trait": "recognition",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "nar_40",
+      "text": "Getting credit for my work matters a great deal to me.",
+      "trait": "recognition",
+      "reverse": false,
+      "source": "MindCheck"
+    }
+  ],
+  "sources": [
+    "Original self-reflection questions written for MindCheck. Not adapted from, and not equivalent to, the Narcissistic Personality Inventory or any other validated instrument."
+  ]
+}

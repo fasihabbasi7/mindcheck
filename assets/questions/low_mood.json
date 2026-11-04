@@ -1,0 +1,100 @@
+{
+  "id": "low_mood",
+  "version": 1,
+  "instructions": "Think about the last 2 weeks. For each problem, choose how often it has bothered you. Question 9 asks about thoughts of self-harm. If you are having those thoughts right now, please reach out to someone you trust or a helpline. You do not have to go through it alone.",
+  "prompt": "Over the last 2 weeks, how often have you been bothered by:",
+  "scale": [
+    {
+      "value": 0,
+      "label": "Not at all"
+    },
+    {
+      "value": 1,
+      "label": "Several days"
+    },
+    {
+      "value": 2,
+      "label": "More than half the days"
+    },
+    {
+      "value": 3,
+      "label": "Nearly every day"
+    }
+  ],
+  "traits": [
+    {
+      "id": "mood",
+      "name": "Low-mood symptoms",
+      "description": "How often common symptoms of low mood have bothered you recently."
+    }
+  ],
+  "questions": [
+    {
+      "id": "phq_01",
+      "text": "Little interest or pleasure in doing things",
+      "trait": "mood",
+      "reverse": false,
+      "source": "PHQ-9"
+    },
+    {
+      "id": "phq_02",
+      "text": "Feeling down, depressed, or hopeless",
+      "trait": "mood",
+      "reverse": false,
+      "source": "PHQ-9"
+    },
+    {
+      "id": "phq_03",
+      "text": "Trouble falling or staying asleep, or sleeping too much",
+      "trait": "mood",
+      "reverse": false,
+      "source": "PHQ-9"
+    },
+    {
+      "id": "phq_04",
+      "text": "Feeling tired or having little energy",
+      "trait": "mood",
+      "reverse": false,
+      "source": "PHQ-9"
+    },
+    {
+      "id": "phq_05",
+      "text": "Poor appetite or overeating",
+      "trait": "mood",
+      "reverse": false,
+      "source": "PHQ-9"
+    },
+    {
+      "id": "phq_06",
+      "text": "Feeling bad about yourself — or that you are a failure or have let yourself or your family down",
+      "trait": "mood",
+      "reverse": false,
+      "source": "PHQ-9"
+    },
+    {
+      "id": "phq_07",
+      "text": "Trouble concentrating on things, such as reading the newspaper or watching television",
+      "trait": "mood",
+      "reverse": false,
+      "source": "PHQ-9"
+    },
+    {
+      "id": "phq_08",
+      "text": "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual",
+      "trait": "mood",
+      "reverse": false,
+      "source": "PHQ-9"
+    },
+    {
+      "id": "phq_09",
+      "text": "Thoughts that you would be better off dead or of hurting yourself in some way",
+      "trait": "mood",
+      "reverse": false,
+      "source": "PHQ-9",
+      "safety": true
+    }
+  ],
+  "sources": [
+    "Patient Health Questionnaire (PHQ-9). Developed by Drs. Robert L. Spitzer, Janet B. W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+  ]
+}

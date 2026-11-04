@@ -1,0 +1,63 @@
+{
+  "id": "low_mood",
+  "scoring": "sum",
+  "levelLabels": {
+    "low": "Few",
+    "moderate": "Some",
+    "high": "Many"
+  },
+  "overallLabel": "PHQ-9 score",
+  "overallMax": 27,
+  "bands": [
+    {
+      "min": 0,
+      "max": 5,
+      "title": "Minimal symptoms",
+      "summary": "Your answers fall in the PHQ-9's minimal range (0–4). Few low-mood symptoms have bothered you over the last two weeks."
+    },
+    {
+      "min": 5,
+      "max": 10,
+      "title": "Mild symptoms",
+      "summary": "Your answers fall in the PHQ-9's mild range (5–9). Some low-mood symptoms have bothered you recently. Keep an eye on how you feel."
+    },
+    {
+      "min": 10,
+      "max": 15,
+      "title": "Moderate symptoms",
+      "summary": "Your answers fall in the PHQ-9's moderate range (10–14). It would be a good idea to talk to a doctor or mental health professional about how you have been feeling."
+    },
+    {
+      "min": 15,
+      "max": 20,
+      "title": "Moderately severe symptoms",
+      "summary": "Your answers fall in the PHQ-9's moderately severe range (15–19). Please consider speaking to a doctor or mental health professional soon."
+    },
+    {
+      "min": 20,
+      "max": 28,
+      "title": "Severe symptoms",
+      "summary": "Your answers fall in the PHQ-9's severe range (20–27). Please reach out to a doctor or mental health professional as soon as you can. You deserve support."
+    }
+  ],
+  "support": {
+    "when": "above",
+    "threshold": 10,
+    "text": "A score of 10 or more is the point at which health professionals usually suggest a proper conversation about mood. Talking to a doctor, counsellor or someone you trust is a strong, positive step."
+  },
+  "traits": {
+    "mood": {
+      "low": "Few symptoms of low mood have bothered you recently.",
+      "moderate": "Some symptoms of low mood have bothered you recently.",
+      "high": "Many symptoms of low mood have bothered you recently.",
+      "reflect": "What has been weighing on you most over the last two weeks?",
+      "tip": "Try to keep one small routine each day: a walk, a meal with someone, or a set bedtime."
+    }
+  },
+  "suggestions": [
+    "Low mood is common and treatable. Reaching out is a sign of strength.",
+    "Sleep, daylight, movement and contact with people you trust can all help a little each day.",
+    "Retake this check-in in two weeks to see how things change."
+  ],
+  "note": "The PHQ-9 adds up your nine answers (Not at all = 0, Several days = 1, More than half the days = 2, Nearly every day = 3) for a score from 0 to 27. The ranges shown are the PHQ-9's official severity ranges. A PHQ-9 score is a screening result only. It cannot diagnose depression; only a qualified professional can do that."
+}

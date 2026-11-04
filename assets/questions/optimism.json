@@ -1,0 +1,216 @@
+{
+  "id": "optimism",
+  "version": 1,
+  "instructions": "Describe yourself as you generally are now, not as you wish to be. Questions 1–10 come from the public-domain IPIP Optimism scale; questions 11–20 were written for MindCheck and explore how you bounce back. There are no right or wrong answers.",
+  "prompt": "How accurately does this describe you?",
+  "scale": [
+    {
+      "value": 1,
+      "label": "Very inaccurate"
+    },
+    {
+      "value": 2,
+      "label": "Moderately inaccurate"
+    },
+    {
+      "value": 3,
+      "label": "Neither accurate nor inaccurate"
+    },
+    {
+      "value": 4,
+      "label": "Moderately accurate"
+    },
+    {
+      "value": 5,
+      "label": "Very accurate"
+    }
+  ],
+  "traits": [
+    {
+      "id": "outlook",
+      "name": "Positive outlook",
+      "description": "How much you expect things to go well in the future."
+    },
+    {
+      "id": "steadiness",
+      "name": "Mood steadiness",
+      "description": "How settled and comfortable you usually feel in yourself."
+    },
+    {
+      "id": "bounce_back",
+      "name": "Bouncing back",
+      "description": "How quickly you recover and keep going after setbacks."
+    },
+    {
+      "id": "coping",
+      "name": "Coping resources",
+      "description": "How you calm yourself, adapt and ask for help."
+    }
+  ],
+  "questions": [
+    {
+      "id": "opt_01",
+      "text": "Just know that I will be a success.",
+      "trait": "outlook",
+      "reverse": false,
+      "source": "IPIP",
+      "section": "Part 1 · IPIP Optimism"
+    },
+    {
+      "id": "opt_02",
+      "text": "Have a dark outlook on the future.",
+      "trait": "outlook",
+      "reverse": true,
+      "source": "IPIP",
+      "section": "Part 1 · IPIP Optimism"
+    },
+    {
+      "id": "opt_03",
+      "text": "Feel comfortable with myself.",
+      "trait": "steadiness",
+      "reverse": false,
+      "source": "IPIP",
+      "section": "Part 1 · IPIP Optimism"
+    },
+    {
+      "id": "opt_04",
+      "text": "Feel that my life lacks direction.",
+      "trait": "outlook",
+      "reverse": true,
+      "source": "IPIP",
+      "section": "Part 1 · IPIP Optimism"
+    },
+    {
+      "id": "opt_05",
+      "text": "Seldom feel blue.",
+      "trait": "steadiness",
+      "reverse": false,
+      "source": "IPIP",
+      "section": "Part 1 · IPIP Optimism"
+    },
+    {
+      "id": "opt_06",
+      "text": "Dislike myself.",
+      "trait": "steadiness",
+      "reverse": true,
+      "source": "IPIP",
+      "section": "Part 1 · IPIP Optimism"
+    },
+    {
+      "id": "opt_07",
+      "text": "Look at the bright side of life.",
+      "trait": "outlook",
+      "reverse": false,
+      "source": "IPIP",
+      "section": "Part 1 · IPIP Optimism"
+    },
+    {
+      "id": "opt_08",
+      "text": "Often feel blue.",
+      "trait": "steadiness",
+      "reverse": true,
+      "source": "IPIP",
+      "section": "Part 1 · IPIP Optimism"
+    },
+    {
+      "id": "opt_09",
+      "text": "See difficulties everywhere.",
+      "trait": "outlook",
+      "reverse": true,
+      "source": "IPIP",
+      "section": "Part 1 · IPIP Optimism"
+    },
+    {
+      "id": "opt_10",
+      "text": "Am often in a bad mood.",
+      "trait": "steadiness",
+      "reverse": true,
+      "source": "IPIP",
+      "section": "Part 1 · IPIP Optimism"
+    },
+    {
+      "id": "opt_11",
+      "text": "Recover quickly after a setback.",
+      "trait": "bounce_back",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Bouncing back"
+    },
+    {
+      "id": "opt_12",
+      "text": "Take a long time to get over disappointments.",
+      "trait": "bounce_back",
+      "reverse": true,
+      "source": "MindCheck",
+      "section": "Part 2 · Bouncing back"
+    },
+    {
+      "id": "opt_13",
+      "text": "See problems as challenges I can learn from.",
+      "trait": "bounce_back",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Bouncing back"
+    },
+    {
+      "id": "opt_14",
+      "text": "Give up easily when things get hard.",
+      "trait": "bounce_back",
+      "reverse": true,
+      "source": "MindCheck",
+      "section": "Part 2 · Bouncing back"
+    },
+    {
+      "id": "opt_15",
+      "text": "Keep going when progress is slow.",
+      "trait": "bounce_back",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Bouncing back"
+    },
+    {
+      "id": "opt_16",
+      "text": "Know how to calm myself down when I am stressed.",
+      "trait": "coping",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Bouncing back"
+    },
+    {
+      "id": "opt_17",
+      "text": "Reach out to others when I need help.",
+      "trait": "coping",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Bouncing back"
+    },
+    {
+      "id": "opt_18",
+      "text": "Feel stuck when plans change suddenly.",
+      "trait": "coping",
+      "reverse": true,
+      "source": "MindCheck",
+      "section": "Part 2 · Bouncing back"
+    },
+    {
+      "id": "opt_19",
+      "text": "Find practical ways to deal with difficult situations.",
+      "trait": "coping",
+      "reverse": false,
+      "source": "MindCheck",
+      "section": "Part 2 · Bouncing back"
+    },
+    {
+      "id": "opt_20",
+      "text": "Let one bad event spoil my whole week.",
+      "trait": "coping",
+      "reverse": true,
+      "source": "MindCheck",
+      "section": "Part 2 · Bouncing back"
+    }
+  ],
+  "sources": [
+    "Optimism items: International Personality Item Pool (ipip.ori.org), Optimism scale keyed to Scheier, Carver & Bridges (1994). Public domain.",
+    "Bouncing-back items: written for MindCheck, not validated."
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "id": "self_esteem",
+  "version": 1,
+  "instructions": "Read each statement and choose how much you agree with it as a description of how you generally feel about yourself. Answer honestly; there are no right or wrong answers.",
+  "prompt": "How much do you agree?",
+  "scale": [
+    {
+      "value": 3,
+      "label": "Strongly agree"
+    },
+    {
+      "value": 2,
+      "label": "Agree"
+    },
+    {
+      "value": 1,
+      "label": "Disagree"
+    },
+    {
+      "value": 0,
+      "label": "Strongly disagree"
+    }
+  ],
+  "traits": [
+    {
+      "id": "worth",
+      "name": "Self-worth",
+      "description": "Your sense that you matter and have value."
+    },
+    {
+      "id": "acceptance",
+      "name": "Self-acceptance",
+      "description": "How comfortable you are with who you are, flaws included."
+    },
+    {
+      "id": "respect",
+      "name": "Self-respect",
+      "description": "How well you honour your own needs and boundaries."
+    },
+    {
+      "id": "confidence",
+      "name": "Confidence",
+      "description": "How much you trust your abilities and judgement."
+    },
+    {
+      "id": "perception",
+      "name": "Self-perception",
+      "description": "How positively you see your qualities and strengths."
+    },
+    {
+      "id": "selftalk",
+      "name": "Inner voice",
+      "description": "How kindly you speak to yourself. Higher means a kinder inner voice."
+    }
+  ],
+  "questions": [
+    {
+      "id": "se_01",
+      "text": "On the whole, I am satisfied with myself.",
+      "trait": "acceptance",
+      "reverse": false,
+      "source": "Rosenberg"
+    },
+    {
+      "id": "se_02",
+      "text": "At times I think I am no good at all.",
+      "trait": "selftalk",
+      "reverse": true,
+      "source": "Rosenberg"
+    },
+    {
+      "id": "se_03",
+      "text": "I feel that I have a number of good qualities.",
+      "trait": "perception",
+      "reverse": false,
+      "source": "Rosenberg"
+    },
+    {
+      "id": "se_04",
+      "text": "I am able to do things as well as most other people.",
+      "trait": "confidence",
+      "reverse": false,
+      "source": "Rosenberg"
+    },
+    {
+      "id": "se_05",
+      "text": "I feel I do not have much to be proud of.",
+      "trait": "perception",
+      "reverse": true,
+      "source": "Rosenberg"
+    },
+    {
+      "id": "se_06",
+      "text": "I certainly feel useless at times.",
+      "trait": "worth",
+      "reverse": true,
+      "source": "Rosenberg"
+    },
+    {
+      "id": "se_07",
+      "text": "I feel that I'm a person of worth, at least on an equal plane with others.",
+      "trait": "worth",
+      "reverse": false,
+      "source": "Rosenberg"
+    },
+    {
+      "id": "se_08",
+      "text": "I wish I could have more respect for myself.",
+      "trait": "respect",
+      "reverse": true,
+      "source": "Rosenberg"
+    },
+    {
+      "id": "se_09",
+      "text": "All in all, I am inclined to feel that I am a failure.",
+      "trait": "selftalk",
+      "reverse": true,
+      "source": "Rosenberg"
+    },
+    {
+      "id": "se_10",
+      "text": "I take a positive attitude toward myself.",
+      "trait": "acceptance",
+      "reverse": false,
+      "source": "Rosenberg"
+    },
+    {
+      "id": "se_11",
+      "text": "I believe I deserve kindness and respect from others.",
+      "trait": "worth",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_12",
+      "text": "My worth does not depend on how well I perform.",
+      "trait": "worth",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_13",
+      "text": "I can accept my flaws without being harsh on myself.",
+      "trait": "acceptance",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_14",
+      "text": "I often wish I were a completely different person.",
+      "trait": "acceptance",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_15",
+      "text": "I set boundaries when people treat me poorly.",
+      "trait": "respect",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_16",
+      "text": "I keep the promises I make to myself.",
+      "trait": "respect",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_17",
+      "text": "I put others' needs before my own, even when it harms me.",
+      "trait": "respect",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_18",
+      "text": "I trust my own judgement when making decisions.",
+      "trait": "confidence",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_19",
+      "text": "I feel comfortable sharing my opinions in a group.",
+      "trait": "confidence",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_20",
+      "text": "I avoid new challenges because I expect to fail.",
+      "trait": "confidence",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_21",
+      "text": "I can name things I am genuinely good at.",
+      "trait": "perception",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_22",
+      "text": "When I compare myself with others, I usually come out worse.",
+      "trait": "perception",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_23",
+      "text": "When I make a mistake, I speak to myself harshly.",
+      "trait": "selftalk",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_24",
+      "text": "I am quick to criticise myself.",
+      "trait": "selftalk",
+      "reverse": true,
+      "source": "MindCheck"
+    },
+    {
+      "id": "se_25",
+      "text": "I can encourage myself when things get hard.",
+      "trait": "selftalk",
+      "reverse": false,
+      "source": "MindCheck"
+    }
+  ],
+  "sources": [
+    "Items 1-10: Rosenberg Self-Esteem Scale. Rosenberg, M. (1965). Society and the Adolescent Self-Image. Princeton University Press. Public domain.",
+    "Items 11-25: written for MindCheck."
+  ]
+}

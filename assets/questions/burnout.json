@@ -1,0 +1,215 @@
+{
+  "id": "burnout",
+  "version": 1,
+  "instructions": "Choose the answer that best describes how you have been feeling. Part 2 asks about your work. If you are a student, think of your studies as your work. There are no right or wrong answers.",
+  "prompt": "Choose the answer that fits you best.",
+  "scale": [
+    {
+      "value": 0,
+      "label": "Never / almost never"
+    },
+    {
+      "value": 1,
+      "label": "Seldom"
+    },
+    {
+      "value": 2,
+      "label": "Sometimes"
+    },
+    {
+      "value": 3,
+      "label": "Often"
+    },
+    {
+      "value": 4,
+      "label": "Always"
+    }
+  ],
+  "traits": [
+    {
+      "id": "personal",
+      "name": "Personal burnout",
+      "description": "Physical and emotional exhaustion in general, whatever the cause."
+    },
+    {
+      "id": "work",
+      "name": "Work-related burnout",
+      "description": "Exhaustion that you link to your work or studies."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cbi_01",
+      "text": "How often do you feel tired?",
+      "trait": "personal",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 1 · Personal burnout"
+    },
+    {
+      "id": "cbi_02",
+      "text": "How often are you physically exhausted?",
+      "trait": "personal",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 1 · Personal burnout"
+    },
+    {
+      "id": "cbi_03",
+      "text": "How often are you emotionally exhausted?",
+      "trait": "personal",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 1 · Personal burnout"
+    },
+    {
+      "id": "cbi_04",
+      "text": "How often do you think: \"I can't take it anymore\"?",
+      "trait": "personal",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 1 · Personal burnout"
+    },
+    {
+      "id": "cbi_05",
+      "text": "How often do you feel worn out?",
+      "trait": "personal",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 1 · Personal burnout"
+    },
+    {
+      "id": "cbi_06",
+      "text": "How often do you feel weak and susceptible to illness?",
+      "trait": "personal",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 1 · Personal burnout"
+    },
+    {
+      "id": "cbi_07",
+      "text": "Is your work emotionally exhausting?",
+      "trait": "work",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 2 · Work-related burnout",
+      "options": [
+        {
+          "value": 0,
+          "label": "To a very low degree"
+        },
+        {
+          "value": 1,
+          "label": "To a low degree"
+        },
+        {
+          "value": 2,
+          "label": "Somewhat"
+        },
+        {
+          "value": 3,
+          "label": "To a high degree"
+        },
+        {
+          "value": 4,
+          "label": "To a very high degree"
+        }
+      ]
+    },
+    {
+      "id": "cbi_08",
+      "text": "Do you feel burnt out because of your work?",
+      "trait": "work",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 2 · Work-related burnout",
+      "options": [
+        {
+          "value": 0,
+          "label": "To a very low degree"
+        },
+        {
+          "value": 1,
+          "label": "To a low degree"
+        },
+        {
+          "value": 2,
+          "label": "Somewhat"
+        },
+        {
+          "value": 3,
+          "label": "To a high degree"
+        },
+        {
+          "value": 4,
+          "label": "To a very high degree"
+        }
+      ]
+    },
+    {
+      "id": "cbi_09",
+      "text": "Does your work frustrate you?",
+      "trait": "work",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 2 · Work-related burnout",
+      "options": [
+        {
+          "value": 0,
+          "label": "To a very low degree"
+        },
+        {
+          "value": 1,
+          "label": "To a low degree"
+        },
+        {
+          "value": 2,
+          "label": "Somewhat"
+        },
+        {
+          "value": 3,
+          "label": "To a high degree"
+        },
+        {
+          "value": 4,
+          "label": "To a very high degree"
+        }
+      ]
+    },
+    {
+      "id": "cbi_10",
+      "text": "Do you feel worn out at the end of the working day?",
+      "trait": "work",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 2 · Work-related burnout"
+    },
+    {
+      "id": "cbi_11",
+      "text": "Are you exhausted in the morning at the thought of another day at work?",
+      "trait": "work",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 2 · Work-related burnout"
+    },
+    {
+      "id": "cbi_12",
+      "text": "Do you feel that every working hour is tiring for you?",
+      "trait": "work",
+      "reverse": false,
+      "source": "CBI",
+      "section": "Part 2 · Work-related burnout"
+    },
+    {
+      "id": "cbi_13",
+      "text": "Do you have enough energy for family and friends during leisure time?",
+      "trait": "work",
+      "reverse": true,
+      "source": "CBI",
+      "section": "Part 2 · Work-related burnout"
+    }
+  ],
+  "sources": [
+    "Kristensen, T. S., Borritz, M., Villadsen, E., & Christensen, K. B. (2005). The Copenhagen Burnout Inventory: A new tool for the assessment of burnout. Work & Stress, 19(3), 192–207. Personal and work-related scales, freely available from the National Research Centre for the Working Environment (NFA), Denmark."
+  ]
+}

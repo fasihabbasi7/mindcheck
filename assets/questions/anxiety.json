@@ -1,0 +1,237 @@
+{
+  "id": "anxiety",
+  "version": 1,
+  "instructions": "Think about the last 2 weeks. For each item, choose how often it has bothered you. There are no right or wrong answers.",
+  "prompt": "Over the last 2 weeks, how often have you been bothered by:",
+  "scale": [
+    {
+      "value": 0,
+      "label": "Not at all"
+    },
+    {
+      "value": 1,
+      "label": "Several days"
+    },
+    {
+      "value": 2,
+      "label": "More than half the days"
+    },
+    {
+      "value": 3,
+      "label": "Nearly every day"
+    }
+  ],
+  "traits": [
+    {
+      "id": "worry",
+      "name": "Worry & overthinking",
+      "description": "How often your mind gets caught in worrying or going over things."
+    },
+    {
+      "id": "nervousness",
+      "name": "Nervousness",
+      "description": "How often you feel on edge or uneasy."
+    },
+    {
+      "id": "tension",
+      "name": "Physical tension",
+      "description": "How often stress shows up in your body."
+    },
+    {
+      "id": "relaxing",
+      "name": "Difficulty relaxing",
+      "description": "How easy it is to switch off and settle."
+    },
+    {
+      "id": "apprehension",
+      "name": "Fear & apprehension",
+      "description": "How often you expect or fear that something bad will happen."
+    },
+    {
+      "id": "stress",
+      "name": "Stress response",
+      "description": "How stress affects your mood, focus and reactions."
+    }
+  ],
+  "questions": [
+    {
+      "id": "anx_01",
+      "text": "Feeling nervous, anxious, or on edge",
+      "trait": "nervousness",
+      "reverse": false,
+      "source": "GAD-7"
+    },
+    {
+      "id": "anx_02",
+      "text": "Not being able to stop or control worrying",
+      "trait": "worry",
+      "reverse": false,
+      "source": "GAD-7"
+    },
+    {
+      "id": "anx_03",
+      "text": "Worrying too much about different things",
+      "trait": "worry",
+      "reverse": false,
+      "source": "GAD-7"
+    },
+    {
+      "id": "anx_04",
+      "text": "Trouble relaxing",
+      "trait": "relaxing",
+      "reverse": false,
+      "source": "GAD-7"
+    },
+    {
+      "id": "anx_05",
+      "text": "Being so restless that it is hard to sit still",
+      "trait": "relaxing",
+      "reverse": false,
+      "source": "GAD-7"
+    },
+    {
+      "id": "anx_06",
+      "text": "Becoming easily annoyed or irritable",
+      "trait": "stress",
+      "reverse": false,
+      "source": "GAD-7"
+    },
+    {
+      "id": "anx_07",
+      "text": "Feeling afraid, as if something awful might happen",
+      "trait": "apprehension",
+      "reverse": false,
+      "source": "GAD-7"
+    },
+    {
+      "id": "anx_08",
+      "text": "Replaying conversations or events in your mind long after they happened",
+      "trait": "worry",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_09",
+      "text": "Thinking through everything that could go wrong before you do something",
+      "trait": "worry",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_10",
+      "text": "Second-guessing yourself so much that decisions feel hard",
+      "trait": "worry",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_11",
+      "text": "Feeling uneasy in situations that most people seem to find ordinary",
+      "trait": "nervousness",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_12",
+      "text": "Getting a nervous stomach before everyday tasks",
+      "trait": "nervousness",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_13",
+      "text": "Needing reassurance from others before you can feel calm",
+      "trait": "nervousness",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_14",
+      "text": "Noticing tight muscles in your neck, shoulders or jaw",
+      "trait": "tension",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_15",
+      "text": "A racing heart or shallow breathing when you feel stressed",
+      "trait": "tension",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_16",
+      "text": "Headaches or stomach aches when you are under pressure",
+      "trait": "tension",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_17",
+      "text": "Lying awake because your mind will not switch off",
+      "trait": "relaxing",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_18",
+      "text": "Finding it hard to enjoy free time because you feel you should be doing something",
+      "trait": "relaxing",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_19",
+      "text": "Feeling unable to settle even when nothing urgent needs doing",
+      "trait": "relaxing",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_20",
+      "text": "Avoiding places or situations because of how anxious they might make you feel",
+      "trait": "apprehension",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_21",
+      "text": "Expecting bad news when your phone rings or a message arrives",
+      "trait": "apprehension",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_22",
+      "text": "A sense of dread about the days ahead",
+      "trait": "apprehension",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_23",
+      "text": "Feeling overwhelmed by tasks you would normally manage",
+      "trait": "stress",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_24",
+      "text": "Snapping at people when you are under stress",
+      "trait": "stress",
+      "reverse": false,
+      "source": "MindCheck"
+    },
+    {
+      "id": "anx_25",
+      "text": "Struggling to concentrate because worries keep interrupting you",
+      "trait": "stress",
+      "reverse": false,
+      "source": "MindCheck"
+    }
+  ],
+  "sources": [
+    "Items 1-7: GAD-7. Spitzer, Kroenke, Williams & Löwe (2006). Developed with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute.",
+    "Items 8-25: written for MindCheck."
+  ]
+}

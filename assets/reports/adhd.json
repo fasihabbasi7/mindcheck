@@ -1,0 +1,104 @@
+{
+  "id": "adhd",
+  "scoring": "asrs",
+  "levelLabels": {
+    "low": "Lower",
+    "moderate": "Moderate",
+    "high": "Higher"
+  },
+  "overallLabel": "ASRS screener score",
+  "overallMax": 24,
+  "bands": [
+    {
+      "min": 0,
+      "max": 10,
+      "title": "Below the screening threshold",
+      "summary": "Your answers fall well below the ASRS screening threshold of 14. They do not suggest frequent ADHD-related experiences over the past six months."
+    },
+    {
+      "min": 10,
+      "max": 14,
+      "title": "Below the screening threshold, with some symptoms",
+      "summary": "Your answers are below the screening threshold of 14, although some ADHD-related experiences seem to happen fairly often."
+    },
+    {
+      "min": 14,
+      "max": 18,
+      "title": "At or above the screening threshold",
+      "summary": "Your answers are at or above the ASRS screening threshold of 14. Some of these experiences may be worth discussing with a qualified professional. This is not a diagnosis."
+    },
+    {
+      "min": 18,
+      "max": 25,
+      "title": "Well above the screening threshold",
+      "summary": "Your answers are well above the ASRS screening threshold. Consider discussing these experiences with a doctor or qualified professional, who can carry out a full assessment. This is not a diagnosis."
+    }
+  ],
+  "topSection": {
+    "title": "Area you noticed most",
+    "pick": "highest"
+  },
+  "support": {
+    "when": "above",
+    "threshold": 14,
+    "text": "A positive screen is a starting point, not an answer. A doctor, psychiatrist or psychologist can carry out a full ADHD assessment and also consider other explanations, such as stress, sleep or anxiety."
+  },
+  "traits": {
+    "inattention": {
+      "low": "Finishing, organising and remembering tasks rarely seem to be a problem for you.",
+      "moderate": "You sometimes find it hard to finish, organise or start demanding tasks.",
+      "high": "Finishing details, getting organised, remembering appointments or starting demanding tasks often seem difficult.",
+      "reflect": "Which kinds of tasks are hardest for you to start or finish?",
+      "tip": "Use reminders outside your head, such as alarms, lists or a calendar, so your memory doesn't have to do all the work."
+    },
+    "hyperactivity": {
+      "low": "Restlessness rarely affects you.",
+      "moderate": "You sometimes feel fidgety or driven to keep moving.",
+      "high": "You often feel restless or driven to keep moving, especially when sitting for long periods.",
+      "reflect": "When do you feel most restless?",
+      "tip": "Build short movement breaks into long periods of sitting."
+    },
+    "focus": {
+      "low": "Your attention usually stays where you want it.",
+      "moderate": "Your mind sometimes wanders or gets pulled away by distractions.",
+      "high": "Distractions and a wandering mind often pull you away from what you are doing.",
+      "reflect": "When is it easiest for you to focus, and what is different then?",
+      "tip": "Try short focus blocks (for example 20 minutes) with notifications switched off."
+    },
+    "organisation": {
+      "low": "Keeping track of things and routines rarely causes problems.",
+      "moderate": "Belongings, clutter or routine steps sometimes slip through.",
+      "high": "Misplacing things, clutter or forgotten steps often make daily life harder.",
+      "reflect": "Which everyday item or task causes you the most friction?",
+      "tip": "Give important items one fixed home, such as a tray by the door for keys and wallet."
+    },
+    "time_management": {
+      "low": "You usually estimate time well and stay on schedule.",
+      "moderate": "Time sometimes gets away from you, especially with bigger tasks.",
+      "high": "Time often slips away, leading to lateness or last-minute rushes.",
+      "reflect": "Which tasks do you most often underestimate?",
+      "tip": "Add a buffer: plan for tasks to take about one and a half times as long as you expect."
+    },
+    "impulsivity": {
+      "low": "You usually pause before speaking or deciding.",
+      "moderate": "Now and then you act or speak before thinking it through.",
+      "high": "You often act, speak or buy on impulse and sometimes regret it later.",
+      "reflect": "In what situations do you find it hardest to pause?",
+      "tip": "Before a non-urgent purchase or reply, try a short pause rule, such as waiting 10 minutes."
+    },
+    "restlessness": {
+      "low": "You can usually settle and relax during quiet time.",
+      "moderate": "You sometimes feel fidgety or need to move during quiet moments.",
+      "high": "You often feel a strong need to move and find quiet time hard.",
+      "reflect": "What kinds of movement help you feel settled?",
+      "tip": "Plan movement into your day, such as a walk before tasks that need you to sit still."
+    }
+  },
+  "suggestions": [
+    "Your ASRS score comes only from questions 1-6. The everyday pattern areas are extra self-reflection and are not part of the screener.",
+    "ADHD-like experiences can also come from stress, poor sleep, anxiety or low mood.",
+    "Only a qualified professional can assess ADHD, through a full evaluation.",
+    "Practical tools like timers, checklists and working alongside someone can help, with or without a diagnosis."
+  ],
+  "note": "ASRS screener (questions 1-6), scored using the Harvard ASRS v1.1 scoring update (2024): Never = 0, Rarely = 1, Sometimes = 2, Often = 3, Very often = 4, summed to 0-24. A total of 14 or more is a positive screen. Bands: 0-9 low negative, 10-13 high negative, 14-17 low positive, 18-24 high positive. Everyday patterns (questions 7-20) are MindCheck self-reflection questions. Each area is shown on a 0-100 scale; they are not validated and never change the ASRS score. 'Attention & organisation' and 'Restlessness & activity' come from the ASRS questions."
+}

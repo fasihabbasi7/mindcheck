@@ -1,0 +1,107 @@
+{
+  "id": "narcissism",
+  "scoring": "tendencyIndex",
+  "levelLabels": {
+    "low": "Lower",
+    "moderate": "Moderate",
+    "high": "Higher"
+  },
+  "overallLabel": "Narcissistic tendencies",
+  "bands": [
+    {
+      "min": 0,
+      "max": 35,
+      "title": "Fewer narcissistic traits",
+      "summary": "Your answers show relatively few narcissistic tendencies. You may tend to put others' needs and views alongside, or ahead of, your own."
+    },
+    {
+      "min": 35,
+      "max": 65,
+      "title": "Some narcissistic traits",
+      "summary": "Your answers show a mix. Like most people, you have some narcissistic tendencies alongside empathy and modesty."
+    },
+    {
+      "min": 65,
+      "max": 100,
+      "title": "More narcissistic traits",
+      "summary": "Your answers show several narcissistic tendencies, such as a strong wish for recognition or sensitivity to criticism. Reflecting on how these affect your relationships can be valuable."
+    }
+  ],
+  "topSection": {
+    "title": "Most prominent traits",
+    "pick": "highest"
+  },
+  "focusSection": {
+    "title": "Least prominent traits",
+    "pick": "lowest"
+  },
+  "support": {
+    "when": "above",
+    "threshold": 65,
+    "text": "If these patterns cause difficulties in your relationships or work, a therapist can help you explore them without judgement."
+  },
+  "traits": {
+    "self_importance": {
+      "low": "You tend to see yourself as one among equals.",
+      "moderate": "You have healthy confidence in your abilities, with some sense of being special.",
+      "high": "You often see yourself as more talented or special than others.",
+      "reflect": "How do you feel when others are recognised for their talents?",
+      "tip": "Notice a strength in someone you work or live with, and tell them about it."
+    },
+    "admiration": {
+      "low": "You don't depend much on praise to feel good.",
+      "moderate": "Praise matters to you, as it does to most people.",
+      "high": "Admiration and praise strongly affect how you feel about yourself.",
+      "reflect": "How do you feel on days when no one notices what you do?",
+      "tip": "Try acknowledging your own efforts privately, without waiting for others to."
+    },
+    "attention": {
+      "low": "You are comfortable letting others take the spotlight.",
+      "moderate": "You enjoy attention at times but don't need it.",
+      "high": "You enjoy, and often seek, being the centre of attention.",
+      "reflect": "How much space do others get in your conversations?",
+      "tip": "In your next conversation, ask two follow-up questions before sharing your own story."
+    },
+    "entitlement": {
+      "low": "You rarely expect special treatment.",
+      "moderate": "You sometimes feel you deserve more than you get.",
+      "high": "You often feel you deserve special treatment or favours.",
+      "reflect": "When did you last feel something was owed to you, and why?",
+      "tip": "Practise noticing what others give you, and thank them for it."
+    },
+    "criticism": {
+      "low": "You can take criticism calmly and learn from it.",
+      "moderate": "Criticism sometimes stings, but you usually recover.",
+      "high": "Criticism and disagreement tend to hit hard and stay with you.",
+      "reflect": "What feedback has stung the most, and was any of it useful?",
+      "tip": "When criticised, pause before responding and look for one useful point."
+    },
+    "empathy": {
+      "low": "You may find it harder to tune in to, or prioritise, other people's feelings.",
+      "moderate": "You care about others' feelings, though not equally in every situation.",
+      "high": "You are tuned in to others' feelings and make time for them.",
+      "reflect": "When did you last truly understand how someone else felt?",
+      "tip": "Ask someone how they are really doing, and listen without steering the conversation."
+    },
+    "competition": {
+      "low": "Winning and comparing matter little to you.",
+      "moderate": "You enjoy some healthy competition.",
+      "high": "Winning and outperforming others matter a lot to you.",
+      "reflect": "How do you feel when someone close to you succeeds?",
+      "tip": "Try celebrating someone else's success wholeheartedly this week."
+    },
+    "recognition": {
+      "low": "You are content even when your work goes unnoticed.",
+      "moderate": "Getting credit matters to you, as it does to most people.",
+      "high": "Being recognised and credited is very important to you.",
+      "reflect": "What would change if no one ever knew about your achievements?",
+      "tip": "Do one kind or useful thing this week without telling anyone."
+    }
+  },
+  "suggestions": [
+    "Everyone has some narcissistic traits. In balance, confidence and ambition can be strengths.",
+    "Noticing how your traits affect other people is a powerful step in self-awareness.",
+    "This reflection cannot assess Narcissistic Personality Disorder."
+  ],
+  "note": "Each trait is the average of its 5 answers (reverse-worded questions flipped) on a 0–100 scale. The overall score averages the eight traits, counting Empathy in reverse (more empathy lowers the score). These are MindCheck self-reflection questions and are not validated."
+}

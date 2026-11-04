@@ -1,0 +1,93 @@
+{
+  "id": "self_esteem",
+  "scoring": "average",
+  "levelLabels": {
+    "low": "Lower",
+    "moderate": "Moderate",
+    "high": "Higher"
+  },
+  "overallLabel": "Self-esteem score",
+  "bands": [
+    {
+      "min": 0,
+      "max": 40,
+      "title": "Lower self-esteem right now",
+      "summary": "Your answers suggest you are currently quite hard on yourself and may find it difficult to see your own worth. This is common, and self-esteem can grow with time and support."
+    },
+    {
+      "min": 40,
+      "max": 70,
+      "title": "Moderate self-esteem",
+      "summary": "Your answers suggest a generally balanced view of yourself, with some areas where self-doubt shows up."
+    },
+    {
+      "min": 70,
+      "max": 100,
+      "title": "Healthy self-esteem",
+      "summary": "Your answers suggest you generally value and accept yourself, while still seeing room to grow."
+    }
+  ],
+  "topSection": {
+    "title": "Your strengths",
+    "pick": "highest"
+  },
+  "focusSection": {
+    "title": "Areas to nurture",
+    "pick": "lowest"
+  },
+  "support": {
+    "when": "below",
+    "threshold": 40,
+    "text": "If feelings of worthlessness are persistent or overwhelming, talking with a counsellor or someone you trust can really help. You deserve support."
+  },
+  "traits": {
+    "worth": {
+      "low": "You may sometimes doubt that you matter or deserve good things.",
+      "moderate": "You generally see your value, though it may waver at times.",
+      "high": "You have a steady sense that you matter and deserve respect.",
+      "reflect": "What would you say to a friend who felt the way you do about yourself?",
+      "tip": "Each evening, write down one thing you did that reflects who you want to be."
+    },
+    "acceptance": {
+      "low": "You may be critical of your flaws and sometimes wish you were different.",
+      "moderate": "You accept much of who you are, with some parts you still struggle with.",
+      "high": "You are comfortable with who you are, imperfections included.",
+      "reflect": "Which part of yourself is hardest to accept, and why?",
+      "tip": "When you notice a flaw, try adding \"and that's human\" to the thought."
+    },
+    "respect": {
+      "low": "You may put others' needs before your own, even when it costs you.",
+      "moderate": "You often honour your own needs, though boundaries can slip under pressure.",
+      "high": "You protect your needs and set boundaries when you need to.",
+      "reflect": "Where in your life would a clearer boundary help you?",
+      "tip": "Practise one small \"no\" this week to something that drains you."
+    },
+    "confidence": {
+      "low": "You may doubt your judgement and avoid challenges for fear of failing.",
+      "moderate": "You trust yourself in familiar areas, with more doubt in new situations.",
+      "high": "You trust your abilities and are willing to take on challenges.",
+      "reflect": "What is one challenge you avoided recently, and what would trying it look like?",
+      "tip": "Set a small, achievable goal and notice the confidence that comes from finishing it."
+    },
+    "perception": {
+      "low": "You may struggle to recognise your strengths and often compare yourself unfavourably with others.",
+      "moderate": "You see some of your strengths, though comparison can cloud the picture.",
+      "high": "You recognise your good qualities and what you are good at.",
+      "reflect": "What strengths would the people closest to you say you have?",
+      "tip": "Ask someone you trust what they value about you, and write it down."
+    },
+    "selftalk": {
+      "low": "Your inner voice may be harsh, especially after mistakes.",
+      "moderate": "Your inner voice is sometimes kind and sometimes critical.",
+      "high": "You tend to speak to yourself with encouragement and understanding.",
+      "reflect": "What do you usually say to yourself after a mistake?",
+      "tip": "Next time you make a mistake, respond to yourself as you would to a good friend."
+    }
+  },
+  "suggestions": [
+    "Self-esteem changes over time. This is a snapshot, not a verdict.",
+    "Small, kind habits, like noticing what went well each day, can gradually shift how you see yourself.",
+    "If low self-worth weighs on you, a counsellor can help you explore it safely."
+  ],
+  "note": "Your score is the average of all 25 answers (negatively worded questions flipped), shown on a 0–100 scale. It combines the 10 Rosenberg questions with 15 MindCheck questions, so it is not an official Rosenberg score."
+}

@@ -1,0 +1,85 @@
+{
+  "id": "optimism",
+  "scoring": "average",
+  "levelLabels": {
+    "low": "Lower",
+    "moderate": "Moderate",
+    "high": "Higher"
+  },
+  "overallLabel": "Optimism & resilience score",
+  "bands": [
+    {
+      "min": 0,
+      "max": 25,
+      "title": "Bracing for the worst",
+      "summary": "Your answers suggest the future feels uncertain and setbacks hit hard right now. That is understandable, and outlook can change."
+    },
+    {
+      "min": 25,
+      "max": 50,
+      "title": "Cautious outlook",
+      "summary": "Your answers suggest you tend to expect difficulties, though you can sometimes see the bright side."
+    },
+    {
+      "min": 50,
+      "max": 75,
+      "title": "Hopeful and steady",
+      "summary": "Your answers suggest you generally expect things to work out and can recover from setbacks."
+    },
+    {
+      "min": 75,
+      "max": 100,
+      "title": "Strongly optimistic",
+      "summary": "Your answers suggest a hopeful outlook and a strong ability to bounce back."
+    }
+  ],
+  "topSection": {
+    "title": "Your strongest areas",
+    "pick": "highest"
+  },
+  "focusSection": {
+    "title": "Areas to nurture",
+    "pick": "lowest"
+  },
+  "support": {
+    "when": "below",
+    "threshold": 25,
+    "text": "If you have been feeling low or hopeless for a while, it can really help to talk to someone you trust or a professional. You can also try the Low Mood check-in in MindCheck."
+  },
+  "traits": {
+    "outlook": {
+      "low": "The future can look uncertain or difficult to you right now.",
+      "moderate": "You hope things will work out, with some reservations.",
+      "high": "You tend to expect good things from the future.",
+      "reflect": "What is one thing you are looking forward to?",
+      "tip": "Each evening, write down one thing that went better than expected."
+    },
+    "steadiness": {
+      "low": "Your mood seems to dip often at the moment.",
+      "moderate": "Your mood is fairly steady, with some low days.",
+      "high": "You usually feel settled and comfortable in yourself.",
+      "reflect": "What lifts your mood most reliably?",
+      "tip": "Plan one small, enjoyable activity into each day, even on busy days."
+    },
+    "bounce_back": {
+      "low": "Setbacks seem to stay with you for a while.",
+      "moderate": "You usually recover from setbacks, given some time.",
+      "high": "You tend to recover quickly and keep going after setbacks.",
+      "reflect": "Think of a past setback you got through. What helped?",
+      "tip": "After a setback, ask: \"What can I learn here, and what is my next small step?\""
+    },
+    "coping": {
+      "low": "Calming down, adapting or asking for help can feel hard right now.",
+      "moderate": "You have some ways of coping, though they don't always work.",
+      "high": "You have good ways to calm yourself, adapt and get support.",
+      "reflect": "Who could you lean on when things get hard?",
+      "tip": "Write a short list of things that calm you, and keep it on your phone for tough moments."
+    }
+  },
+  "suggestions": [
+    "Optimism is not ignoring problems. It is expecting that you can find a way through them.",
+    "Resilience grows through support, rest and small wins, not by pushing through alone.",
+    "A rough month can lower this score. Retake it after a while to see how it changes."
+  ],
+  "note": "Your score is the average of all 20 answers, shown on a 0–100 scale. Questions 1–10 are the public-domain IPIP Optimism scale; questions 11–20 were written for MindCheck. The combined score is not validated and does not assess any condition."
+}

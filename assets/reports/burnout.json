@@ -1,0 +1,67 @@
+{
+  "id": "burnout",
+  "scoring": "tendencyIndex",
+  "levelLabels": {
+    "low": "Low",
+    "moderate": "Moderate",
+    "high": "High"
+  },
+  "overallLabel": "Burnout score",
+  "bands": [
+    {
+      "min": 0,
+      "max": 25,
+      "title": "Rarely worn out",
+      "summary": "Your answers suggest you seldom feel exhausted at the moment."
+    },
+    {
+      "min": 25,
+      "max": 50,
+      "title": "Sometimes worn out",
+      "summary": "Your answers suggest you sometimes feel tired or worn out, which is common in busy periods."
+    },
+    {
+      "min": 50,
+      "max": 75,
+      "title": "Often worn out",
+      "summary": "Your answers suggest you often feel exhausted. It may be a good time to look at your workload and rest."
+    },
+    {
+      "min": 75,
+      "max": 101,
+      "title": "Very often worn out",
+      "summary": "Your answers suggest exhaustion is with you most of the time. Please take this seriously and look for support."
+    }
+  ],
+  "topSection": {
+    "title": "Where exhaustion shows most",
+    "pick": "highest"
+  },
+  "support": {
+    "when": "above",
+    "threshold": 50,
+    "text": "Feeling worn out often can affect your health, sleep and relationships. Consider talking to your doctor, a counsellor, or someone at work or school you trust about what could change."
+  },
+  "traits": {
+    "personal": {
+      "low": "You rarely feel physically or emotionally drained.",
+      "moderate": "You sometimes feel physically or emotionally drained.",
+      "high": "You often feel physically or emotionally drained, whatever the cause.",
+      "reflect": "When did you last feel truly rested?",
+      "tip": "Protect your sleep and add short breaks to your day, even five minutes away from screens."
+    },
+    "work": {
+      "low": "Your work or studies rarely leave you exhausted.",
+      "moderate": "Your work or studies sometimes leave you worn out.",
+      "high": "Your work or studies often leave you exhausted or frustrated.",
+      "reflect": "Which part of your work drains you most, and which part gives you energy?",
+      "tip": "Set a clear end to your working day and keep some evenings fully free of work."
+    }
+  },
+  "suggestions": [
+    "Burnout is about prolonged exhaustion, not weakness. It often reflects workload and conditions, not just personal effort.",
+    "Look at what you can change: boundaries, breaks, tasks you can share or drop.",
+    "Rest, movement, time outdoors and time with people you care about all help you recover."
+  ],
+  "note": "Each scale is the average of its answers on the official CBI 0–100 scale (Always or To a very high degree = 100, Never or To a very low degree = 0). Your overall score is the average of the two scales. The bands follow the answer scale (25 = Seldom, 50 = Sometimes, 75 = Often) and are not clinical cut-offs. The CBI's client-related scale is not included."
+}

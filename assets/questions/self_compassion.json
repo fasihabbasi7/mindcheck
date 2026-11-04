@@ -1,0 +1,250 @@
+{
+  "id": "self_compassion",
+  "version": 1,
+  "instructions": "Think about how you typically act towards yourself in difficult times. Read each statement and choose how often you behave in the stated manner. There are no right or wrong answers.",
+  "prompt": "How often do you behave in this way?",
+  "scale": [
+    {
+      "value": 1,
+      "label": "Almost never"
+    },
+    {
+      "value": 2,
+      "label": "Rarely"
+    },
+    {
+      "value": 3,
+      "label": "Sometimes"
+    },
+    {
+      "value": 4,
+      "label": "Often"
+    },
+    {
+      "value": 5,
+      "label": "Almost always"
+    }
+  ],
+  "traits": [
+    {
+      "id": "self_kindness",
+      "name": "Self-kindness",
+      "description": "Being warm and understanding towards yourself when you struggle."
+    },
+    {
+      "id": "self_judgment",
+      "name": "Self-judgment",
+      "description": "Being harsh or critical with yourself. A lower score here is kinder.",
+      "inverse": true
+    },
+    {
+      "id": "common_humanity",
+      "name": "Common humanity",
+      "description": "Seeing difficulties as part of the shared human experience."
+    },
+    {
+      "id": "isolation",
+      "name": "Isolation",
+      "description": "Feeling alone or cut off when things go wrong. A lower score here is kinder.",
+      "inverse": true
+    },
+    {
+      "id": "mindfulness",
+      "name": "Mindfulness",
+      "description": "Holding painful feelings in balanced awareness."
+    },
+    {
+      "id": "over_identification",
+      "name": "Over-identification",
+      "description": "Getting swept away by painful thoughts and feelings. A lower score here is kinder.",
+      "inverse": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "scs_01",
+      "text": "I'm disapproving and judgmental about my own flaws and inadequacies.",
+      "trait": "self_judgment",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_02",
+      "text": "When I'm feeling down I tend to obsess and fixate on everything that's wrong.",
+      "trait": "over_identification",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_03",
+      "text": "When things are going badly for me, I see the difficulties as part of life that everyone goes through.",
+      "trait": "common_humanity",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_04",
+      "text": "When I think about my inadequacies, it tends to make me feel more separate and cut off from the rest of the world.",
+      "trait": "isolation",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_05",
+      "text": "I try to be loving towards myself when I'm feeling emotional pain.",
+      "trait": "self_kindness",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_06",
+      "text": "When I fail at something important to me I become consumed by feelings of inadequacy.",
+      "trait": "over_identification",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_07",
+      "text": "When I'm down and out, I remind myself that there are lots of other people in the world feeling like I am.",
+      "trait": "common_humanity",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_08",
+      "text": "When times are really difficult, I tend to be tough on myself.",
+      "trait": "self_judgment",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_09",
+      "text": "When something upsets me I try to keep my emotions in balance.",
+      "trait": "mindfulness",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_10",
+      "text": "When I feel inadequate in some way, I try to remind myself that feelings of inadequacy are shared by most people.",
+      "trait": "common_humanity",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_11",
+      "text": "I'm intolerant and impatient towards those aspects of my personality I don't like.",
+      "trait": "self_judgment",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_12",
+      "text": "When I'm going through a very hard time, I give myself the caring and tenderness I need.",
+      "trait": "self_kindness",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_13",
+      "text": "When I'm feeling down, I tend to feel like most other people are probably happier than I am.",
+      "trait": "isolation",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_14",
+      "text": "When something painful happens I try to take a balanced view of the situation.",
+      "trait": "mindfulness",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_15",
+      "text": "I try to see my failings as part of the human condition.",
+      "trait": "common_humanity",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_16",
+      "text": "When I see aspects of myself that I don't like, I get down on myself.",
+      "trait": "self_judgment",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_17",
+      "text": "When I fail at something important to me I try to keep things in perspective.",
+      "trait": "mindfulness",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_18",
+      "text": "When I'm really struggling, I tend to feel like other people must be having an easier time of it.",
+      "trait": "isolation",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_19",
+      "text": "I'm kind to myself when I'm experiencing suffering.",
+      "trait": "self_kindness",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_20",
+      "text": "When something upsets me I get carried away with my feelings.",
+      "trait": "over_identification",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_21",
+      "text": "I can be a bit cold-hearted towards myself when I'm experiencing suffering.",
+      "trait": "self_judgment",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_22",
+      "text": "When I'm feeling down I try to approach my feelings with curiosity and openness.",
+      "trait": "mindfulness",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_23",
+      "text": "I'm tolerant of my own flaws and inadequacies.",
+      "trait": "self_kindness",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_24",
+      "text": "When something painful happens I tend to blow the incident out of proportion.",
+      "trait": "over_identification",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_25",
+      "text": "When I fail at something that's important to me, I tend to feel alone in my failure.",
+      "trait": "isolation",
+      "reverse": false,
+      "source": "SCS"
+    },
+    {
+      "id": "scs_26",
+      "text": "I try to be understanding and patient towards those aspects of my personality I don't like.",
+      "trait": "self_kindness",
+      "reverse": false,
+      "source": "SCS"
+    }
+  ],
+  "sources": [
+    "Neff, K. D. (2003). The development and validation of a scale to measure self-compassion. Self and Identity, 2, 223–250. Used with the author's general permission (self-compassion.org)."
+  ]
+}

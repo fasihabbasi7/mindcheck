@@ -1,0 +1,410 @@
+{
+  "id": "big_five",
+  "version": 1,
+  "instructions": "Describe yourself as you generally are now, not as you wish to be in the future. Answer as you honestly see yourself, compared with other people you know of roughly your age. There are no right or wrong answers.",
+  "prompt": "How accurately does this describe you?",
+  "scale": [
+    {
+      "value": 1,
+      "label": "Very inaccurate"
+    },
+    {
+      "value": 2,
+      "label": "Moderately inaccurate"
+    },
+    {
+      "value": 3,
+      "label": "Neither accurate nor inaccurate"
+    },
+    {
+      "value": 4,
+      "label": "Moderately accurate"
+    },
+    {
+      "value": 5,
+      "label": "Very accurate"
+    }
+  ],
+  "traits": [
+    {
+      "id": "openness",
+      "name": "Openness",
+      "description": "Imagination, curiosity and interest in ideas. (Called Intellect/Imagination in the IPIP markers.)"
+    },
+    {
+      "id": "conscientiousness",
+      "name": "Conscientiousness",
+      "description": "Organisation, reliability and attention to detail."
+    },
+    {
+      "id": "extraversion",
+      "name": "Extraversion",
+      "description": "Sociability, talkativeness and comfort in company."
+    },
+    {
+      "id": "agreeableness",
+      "name": "Agreeableness",
+      "description": "Warmth, compassion and concern for others."
+    },
+    {
+      "id": "emotional_stability",
+      "name": "Emotional stability",
+      "description": "Calmness and steadiness of mood. The opposite end is often called Neuroticism."
+    }
+  ],
+  "questions": [
+    {
+      "id": "bf_01",
+      "text": "I am the life of the party.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_02",
+      "text": "I feel little concern for others.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_03",
+      "text": "I am always prepared.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_04",
+      "text": "I get stressed out easily.",
+      "trait": "emotional_stability",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_05",
+      "text": "I have a rich vocabulary.",
+      "trait": "openness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_06",
+      "text": "I don't talk a lot.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_07",
+      "text": "I am interested in people.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_08",
+      "text": "I leave my belongings around.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_09",
+      "text": "I am relaxed most of the time.",
+      "trait": "emotional_stability",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_10",
+      "text": "I have difficulty understanding abstract ideas.",
+      "trait": "openness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_11",
+      "text": "I feel comfortable around people.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_12",
+      "text": "I insult people.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_13",
+      "text": "I pay attention to details.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_14",
+      "text": "I worry about things.",
+      "trait": "emotional_stability",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_15",
+      "text": "I have a vivid imagination.",
+      "trait": "openness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_16",
+      "text": "I keep in the background.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_17",
+      "text": "I sympathize with others' feelings.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_18",
+      "text": "I make a mess of things.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_19",
+      "text": "I seldom feel blue.",
+      "trait": "emotional_stability",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_20",
+      "text": "I am not interested in abstract ideas.",
+      "trait": "openness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_21",
+      "text": "I start conversations.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_22",
+      "text": "I am not interested in other people's problems.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_23",
+      "text": "I get chores done right away.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_24",
+      "text": "I am easily disturbed.",
+      "trait": "emotional_stability",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_25",
+      "text": "I have excellent ideas.",
+      "trait": "openness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_26",
+      "text": "I have little to say.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_27",
+      "text": "I have a soft heart.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_28",
+      "text": "I often forget to put things back in their proper place.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_29",
+      "text": "I get upset easily.",
+      "trait": "emotional_stability",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_30",
+      "text": "I do not have a good imagination.",
+      "trait": "openness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_31",
+      "text": "I talk to a lot of different people at parties.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_32",
+      "text": "I am not really interested in others.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_33",
+      "text": "I like order.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_34",
+      "text": "I change my mood a lot.",
+      "trait": "emotional_stability",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_35",
+      "text": "I am quick to understand things.",
+      "trait": "openness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_36",
+      "text": "I don't like to draw attention to myself.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_37",
+      "text": "I take time out for others.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_38",
+      "text": "I shirk my duties.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_39",
+      "text": "I have frequent mood swings.",
+      "trait": "emotional_stability",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_40",
+      "text": "I use difficult words.",
+      "trait": "openness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_41",
+      "text": "I don't mind being the center of attention.",
+      "trait": "extraversion",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_42",
+      "text": "I feel others' emotions.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_43",
+      "text": "I follow a schedule.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_44",
+      "text": "I get irritated easily.",
+      "trait": "emotional_stability",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_45",
+      "text": "I spend time reflecting on things.",
+      "trait": "openness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_46",
+      "text": "I am quiet around strangers.",
+      "trait": "extraversion",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_47",
+      "text": "I make people feel at ease.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_48",
+      "text": "I am exacting in my work.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_49",
+      "text": "I often feel blue.",
+      "trait": "emotional_stability",
+      "reverse": true,
+      "source": "IPIP"
+    },
+    {
+      "id": "bf_50",
+      "text": "I am full of ideas.",
+      "trait": "openness",
+      "reverse": false,
+      "source": "IPIP"
+    }
+  ],
+  "sources": [
+    "IPIP Big-Five Factor Markers, 50-item version. Goldberg, L. R. (1992). Psychological Assessment, 4, 26-42. International Personality Item Pool (ipip.ori.org), public domain. Items shown in first person."
+  ]
+}
