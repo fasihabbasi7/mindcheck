@@ -4,6 +4,7 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
+import '../data/helplines.dart';
 import '../models/assessment_model.dart';
 import '../models/assessment_result_model.dart';
 import '../models/report_model.dart';
@@ -149,7 +150,8 @@ class PdfReportService {
             _paragraph(
               '${AppStrings.safetyBody} ${AppStrings.safetyEmergency}',
             ),
-            _bullet(AppStrings.safetyHelplinePakistan),
+            if (helplineForThisDevice() case final Helpline local)
+              _bullet(local.line),
             _bullet(AppStrings.safetyHelplineWorld),
             pw.SizedBox(height: 12),
           ],

@@ -14,6 +14,7 @@ import '../../utils/constants.dart';
 import '../../utils/helpers.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/empty_state.dart';
+import '../../widgets/expandable.dart';
 import '../../widgets/glass_card.dart';
 import '../../widgets/mind_background.dart';
 import '../../widgets/result_chart.dart';
@@ -115,10 +116,7 @@ class _DetailsBody extends StatelessWidget {
         ReportCard(
           title: AppStrings.howScored,
           icon: Icons.calculate_outlined,
-          child: Text(
-            report.note,
-            style: text.bodyMedium?.copyWith(color: context.colors.onSurface),
-          ),
+          child: ExpandableText(report.note),
         ),
         const SizedBox(height: AppSpacing.md),
         if (assessment != null)

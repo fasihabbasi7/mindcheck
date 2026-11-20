@@ -42,7 +42,8 @@ class PrimaryButton extends StatelessWidget {
   }
 }
 
-/// Secondary button with an outline.
+/// Secondary button: a solid soft surface with a lavender outline, so it
+/// stands out clearly on the glowing backgrounds.
 class SecondaryButton extends StatelessWidget {
   const SecondaryButton({
     super.key,
@@ -59,10 +60,32 @@ class SecondaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ColorScheme colors = context.colors;
+    final bool dark = context.isDarkMode;
+    final ButtonStyle style = OutlinedButton.styleFrom(
+      backgroundColor: dark
+          ? colors.primary.withValues(alpha: 0.18)
+          : Colors.white.withValues(alpha: 0.92),
+      foregroundColor: dark ? colors.onSurface : colors.primary,
+      disabledBackgroundColor: colors.onSurface.withValues(alpha: 0.05),
+      side: BorderSide(
+        color: colors.primary.withValues(alpha: onPressed == null ? 0.2 : 0.6),
+        width: 1.5,
+      ),
+      textStyle: context.textStyles.labelLarge?.copyWith(
+        fontWeight: FontWeight.w600,
+      ),
+      elevation: 0,
+    );
     final Widget button = icon == null
-        ? OutlinedButton(onPressed: onPressed, child: Text(label))
+        ? OutlinedButton(
+            onPressed: onPressed,
+            style: style,
+            child: Text(label),
+          )
         : OutlinedButton.icon(
             onPressed: onPressed,
+            style: style,
             icon: Icon(icon, size: 20),
             label: Text(label),
           );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../app/theme/app_theme.dart';
 import '../utils/constants.dart';
+import 'motion/glow_edge.dart';
 
 /// Rounded frosted search bar.
 ///
@@ -34,54 +35,58 @@ class MindSearchField extends StatelessWidget {
       borderSide: BorderSide.none,
     );
 
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        borderRadius: radius,
-        color: mind.glassFill,
-        border: Border.all(color: mind.glassBorder),
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: mind.cardShadow,
-            blurRadius: 20,
-            offset: const Offset(0, 8),
+    return GlowEdge(
+      radius: AppRadius.pill,
+      strength: 0.7,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: radius,
+          color: mind.glassFill,
+          border: Border.all(color: mind.glassBorder),
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+              color: mind.cardShadow,
+              blurRadius: 20,
+              offset: const Offset(0, 8),
+            ),
+          ],
+        ),
+        child: TextField(
+          controller: controller,
+          focusNode: focusNode,
+          onChanged: onChanged,
+          onTap: onTap,
+          readOnly: readOnly,
+          textInputAction: TextInputAction.search,
+          style: context.textStyles.bodyLarge,
+          decoration: InputDecoration(
+            hintText: hint,
+            filled: false,
+            prefixIcon: Icon(
+              Icons.search_rounded,
+              color: context.colors.onSurfaceVariant,
+            ),
+            suffixIcon: controller == null
+                ? null
+                : ValueListenableBuilder<TextEditingValue>(
+                    valueListenable: controller!,
+                    builder: (BuildContext context, TextEditingValue value, _) {
+                      if (value.text.isEmpty) return const SizedBox.shrink();
+                      return IconButton(
+                        tooltip: 'Clear search',
+                        icon: const Icon(Icons.close_rounded),
+                        onPressed: () {
+                          controller!.clear();
+                          onChanged?.call('');
+                        },
+                      );
+                    },
+                  ),
+            border: noBorder,
+            enabledBorder: noBorder,
+            focusedBorder: noBorder,
+            contentPadding: const EdgeInsets.symmetric(vertical: 16),
           ),
-        ],
-      ),
-      child: TextField(
-        controller: controller,
-        focusNode: focusNode,
-        onChanged: onChanged,
-        onTap: onTap,
-        readOnly: readOnly,
-        textInputAction: TextInputAction.search,
-        style: context.textStyles.bodyLarge,
-        decoration: InputDecoration(
-          hintText: hint,
-          filled: false,
-          prefixIcon: Icon(
-            Icons.search_rounded,
-            color: context.colors.onSurfaceVariant,
-          ),
-          suffixIcon: controller == null
-              ? null
-              : ValueListenableBuilder<TextEditingValue>(
-                  valueListenable: controller!,
-                  builder: (BuildContext context, TextEditingValue value, _) {
-                    if (value.text.isEmpty) return const SizedBox.shrink();
-                    return IconButton(
-                      tooltip: 'Clear search',
-                      icon: const Icon(Icons.close_rounded),
-                      onPressed: () {
-                        controller!.clear();
-                        onChanged?.call('');
-                      },
-                    );
-                  },
-                ),
-          border: noBorder,
-          enabledBorder: noBorder,
-          focusedBorder: noBorder,
-          contentPadding: const EdgeInsets.symmetric(vertical: 16),
         ),
       ),
     );

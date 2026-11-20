@@ -11,6 +11,7 @@ import '../../utils/constants.dart';
 import '../../widgets/assessment_card.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/empty_state.dart';
+import '../../widgets/expandable.dart';
 import '../../widgets/glass_card.dart';
 import '../../widgets/mind_background.dart';
 
@@ -124,16 +125,15 @@ class _DetailsBody extends StatelessWidget {
         // ---------- About ----------
         _Section(
           title: AppStrings.aboutAssessment,
-          child: Text(
-            assessment.description,
-            style: text.bodyMedium?.copyWith(color: context.colors.onSurface),
-          ),
+          icon: Icons.auto_awesome_rounded,
+          child: ExpandableText(assessment.description),
         ),
         const SizedBox(height: AppSpacing.md),
 
         // ---------- What it explores ----------
         _Section(
           title: AppStrings.whatItExplores,
+          icon: Icons.explore_outlined,
           child: Wrap(
             spacing: AppSpacing.sm,
             runSpacing: AppSpacing.sm,
@@ -148,6 +148,7 @@ class _DetailsBody extends StatelessWidget {
         // ---------- How it works ----------
         _Section(
           title: AppStrings.howItWorks,
+          icon: Icons.tune_rounded,
           child: Column(
             children: <Widget>[
               _InfoRow(
@@ -181,28 +182,41 @@ class _DetailsBody extends StatelessWidget {
         // ---------- Source ----------
         _Section(
           title: AppStrings.source,
+          icon: Icons.menu_book_rounded,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(assessment.sourceName, style: text.titleSmall),
               const SizedBox(height: AppSpacing.sm),
-              Text(assessment.sourceType.explanation, style: text.bodyMedium),
-              const SizedBox(height: AppSpacing.md),
-              Text(assessment.citation, style: text.bodySmall),
-              if (assessment.copyrightNotice != null) ...<Widget>[
-                const SizedBox(height: AppSpacing.sm),
-                Text(assessment.copyrightNotice!, style: text.bodySmall),
-              ],
-              if (assessment.officialUrl != null) ...<Widget>[
-                const SizedBox(height: AppSpacing.sm),
-                Text(AppStrings.officialPage, style: text.labelSmall),
-                SelectableText(
-                  assessment.officialUrl!,
-                  style: text.bodySmall?.copyWith(
-                    color: context.colors.primary,
-                  ),
+              // Fine print stays folded until the user wants it.
+              ExpandableSection(
+                title: AppStrings.sourceDetails,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      assessment.sourceType.explanation,
+                      style: text.bodyMedium,
+                    ),
+                    const SizedBox(height: AppSpacing.md),
+                    Text(assessment.citation, style: text.bodySmall),
+                    if (assessment.copyrightNotice != null) ...<Widget>[
+                      const SizedBox(height: AppSpacing.sm),
+                      Text(assessment.copyrightNotice!, style: text.bodySmall),
+                    ],
+                    if (assessment.officialUrl != null) ...<Widget>[
+                      const SizedBox(height: AppSpacing.sm),
+                      Text(AppStrings.officialPage, style: text.labelSmall),
+                      SelectableText(
+                        assessment.officialUrl!,
+                        style: text.bodySmall?.copyWith(
+                          color: context.colors.primary,
+                        ),
+                      ),
+                    ],
+                  ],
                 ),
-              ],
+              ),
             ],
           ),
         ),
@@ -237,10 +251,11 @@ class _DetailsBody extends StatelessWidget {
 
 /// A titled glass card section.
 class _Section extends StatelessWidget {
-  const _Section({required this.title, required this.child});
+  const _Section({required this.title, required this.child, this.icon});
 
   final String title;
   final Widget child;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -249,7 +264,17 @@ class _Section extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(title, style: context.textStyles.titleMedium),
+          Row(
+            children: <Widget>[
+              if (icon != null) ...<Widget>[
+                GlowIcon(icon: icon!, size: 32),
+                const SizedBox(width: AppSpacing.md),
+              ],
+              Expanded(
+                child: Text(title, style: context.textStyles.titleMedium),
+              ),
+            ],
+          ),
           const SizedBox(height: AppSpacing.md),
           child,
         ],
@@ -298,7 +323,7 @@ class _InfoRow extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Icon(icon, size: 20, color: context.colors.primary),
+          GlowIcon(icon: icon, size: 30),
           const SizedBox(width: AppSpacing.md),
           Expanded(
             child: Column(

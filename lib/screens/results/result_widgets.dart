@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
 import '../../models/assessment_result_model.dart';
 import '../../models/report_model.dart';
@@ -7,6 +8,7 @@ import '../../models/trait_score_model.dart';
 import '../../utils/app_strings.dart';
 import '../../utils/constants.dart';
 import '../../utils/helpers.dart';
+import '../../widgets/expandable.dart';
 import '../../widgets/glass_card.dart';
 import '../../widgets/result_chart.dart';
 
@@ -52,8 +54,8 @@ class ReportCard extends StatelessWidget {
           Row(
             children: <Widget>[
               if (icon != null) ...<Widget>[
-                Icon(icon, size: 20, color: context.colors.primary),
-                const SizedBox(width: AppSpacing.sm),
+                GlowIcon(icon: icon!, size: 34),
+                const SizedBox(width: AppSpacing.md),
               ],
               Expanded(
                 child: Text(title, style: context.textStyles.titleMedium),
@@ -79,13 +81,22 @@ class LevelChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
-        color: context.colors.primaryContainer,
         borderRadius: BorderRadius.circular(AppRadius.pill),
+        gradient: const LinearGradient(
+          colors: <Color>[AppColors.secondary, AppColors.primary],
+        ),
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            color: AppColors.primary.withValues(alpha: 0.3),
+            blurRadius: 8,
+            offset: const Offset(0, 3),
+          ),
+        ],
       ),
       child: Text(
         label,
         style: context.textStyles.labelSmall?.copyWith(
-          color: context.colors.onPrimaryContainer,
+          color: Colors.white,
           fontWeight: FontWeight.w700,
         ),
       ),
@@ -125,12 +136,7 @@ class InsightTile extends StatelessWidget {
           ),
           if (text != null) ...<Widget>[
             const SizedBox(height: 6),
-            Text(
-              text.forLevel(trait.level),
-              style: context.textStyles.bodyMedium?.copyWith(
-                color: context.colors.onSurface,
-              ),
-            ),
+            ExpandableText(text.forLevel(trait.level), trimLines: 2),
           ],
         ],
       ),

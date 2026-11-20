@@ -8,10 +8,10 @@ import 'package:flutter/material.dart';
 class AppTextStyles {
   AppTextStyles._();
 
-  /// Set this to a bundled font family name (for example 'Urbanist') once the
-  /// font files are added to assets/fonts and declared in pubspec.yaml.
-  /// `null` means the platform font (Roboto on Android, SF Pro on iOS).
-  static const String? fontFamily = null;
+  /// Poppins, bundled in assets/fonts: the same geometric typeface as the
+  /// MindCurio logo, so text and logo feel like one brand. Sizes below are
+  /// a touch smaller than usual because Poppins is a wide font.
+  static const String fontFamily = 'Poppins';
 
   static TextTheme textTheme({
     required Color primary,
@@ -20,21 +20,21 @@ class AppTextStyles {
     return TextTheme(
       // Large thin headlines ("Hello, Sara. How are you feeling today?")
       displayLarge: TextStyle(
-        fontSize: 40,
+        fontSize: 38,
         fontWeight: FontWeight.w300,
         height: 1.15,
         letterSpacing: -1.0,
         color: primary,
       ),
       displayMedium: TextStyle(
-        fontSize: 34,
+        fontSize: 32,
         fontWeight: FontWeight.w300,
         height: 1.18,
         letterSpacing: -0.8,
         color: primary,
       ),
       displaySmall: TextStyle(
-        fontSize: 29,
+        fontSize: 27,
         fontWeight: FontWeight.w300,
         height: 1.2,
         letterSpacing: -0.6,
@@ -43,21 +43,21 @@ class AppTextStyles {
 
       // Section titles
       headlineLarge: TextStyle(
-        fontSize: 28,
+        fontSize: 26,
         fontWeight: FontWeight.w600,
         height: 1.25,
         letterSpacing: -0.5,
         color: primary,
       ),
       headlineMedium: TextStyle(
-        fontSize: 24,
+        fontSize: 22,
         fontWeight: FontWeight.w600,
         height: 1.25,
         letterSpacing: -0.4,
         color: primary,
       ),
       headlineSmall: TextStyle(
-        fontSize: 20,
+        fontSize: 19,
         fontWeight: FontWeight.w600,
         height: 1.3,
         letterSpacing: -0.2,
@@ -66,19 +66,19 @@ class AppTextStyles {
 
       // Card titles
       titleLarge: TextStyle(
-        fontSize: 18,
+        fontSize: 17,
         fontWeight: FontWeight.w600,
         height: 1.3,
         color: primary,
       ),
       titleMedium: TextStyle(
-        fontSize: 16,
+        fontSize: 15.5,
         fontWeight: FontWeight.w600,
         height: 1.35,
         color: primary,
       ),
       titleSmall: TextStyle(
-        fontSize: 14,
+        fontSize: 13.5,
         fontWeight: FontWeight.w600,
         height: 1.35,
         color: primary,
@@ -86,13 +86,13 @@ class AppTextStyles {
 
       // Body text
       bodyLarge: TextStyle(
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: FontWeight.w400,
         height: 1.5,
         color: primary,
       ),
       bodyMedium: TextStyle(
-        fontSize: 14,
+        fontSize: 13.5,
         fontWeight: FontWeight.w400,
         height: 1.5,
         color: secondary,
@@ -106,13 +106,13 @@ class AppTextStyles {
 
       // Buttons, chips, small labels
       labelLarge: TextStyle(
-        fontSize: 15,
+        fontSize: 14.5,
         fontWeight: FontWeight.w600,
         letterSpacing: 0.1,
         color: primary,
       ),
       labelMedium: TextStyle(
-        fontSize: 13,
+        fontSize: 12.5,
         fontWeight: FontWeight.w500,
         color: primary,
       ),

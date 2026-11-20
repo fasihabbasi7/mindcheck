@@ -20,8 +20,10 @@ import '../../widgets/assessment_card.dart';
 import '../../widgets/confirm_dialog.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/empty_state.dart';
+import '../../widgets/expandable.dart';
 import '../../widgets/glass_card.dart';
 import '../../widgets/mind_background.dart';
+import '../../widgets/motion/brain_scan.dart';
 import '../../widgets/motion/celebration_burst.dart';
 import '../../widgets/motion/reveal.dart';
 import '../../widgets/result_chart.dart';
@@ -111,8 +113,10 @@ class _OverviewBody extends StatelessWidget {
   final bool fresh;
   final VoidCallback onClose;
 
-  /// When the score starts counting up, and how long it takes.
-  static const Duration _gaugeDelay = Duration(milliseconds: 350);
+  /// When the score starts counting up, and how long it takes. A fresh
+  /// report waits longer, while the light particles swirl in.
+  Duration get _gaugeDelay =>
+      Duration(milliseconds: fresh ? 1150 : 350);
   static const Duration _gaugeDuration = Duration(milliseconds: 1400);
 
   /// Wraps each section so they arrive one after another.
@@ -260,6 +264,7 @@ class _OverviewBody extends StatelessWidget {
                       countTo: overall.value,
                       caption: 'out of ${overall.max.round()}',
                       delay: _gaugeDelay,
+                      assemble: fresh,
                     )
                   else
                     TraitRadarChart(traits: traits),
@@ -278,12 +283,9 @@ class _OverviewBody extends StatelessWidget {
                     style: text.headlineSmall,
                   ),
                   const SizedBox(height: AppSpacing.sm),
-                  Text(
+                  ExpandableText(
                     overall?.bandSummary ?? report.intro ?? '',
                     textAlign: TextAlign.center,
-                    style: text.bodyMedium?.copyWith(
-                      color: context.colors.onSurface,
-                    ),
                   ),
                 ],
               ),
@@ -323,10 +325,13 @@ class _OverviewBody extends StatelessWidget {
             icon: Icons.insights_rounded,
             child: Column(
               children: <Widget>[
-                if (overall != null && traits.length >= 3) ...<Widget>[
-                  TraitRadarChart(traits: traits, height: 240),
-                  const SizedBox(height: AppSpacing.lg),
-                ],
+                // Brain scan: one glowing region per trait, switching on
+                // in step with the bars below.
+                BrainScan(
+                  levels: <double>[for (final TraitScore t in traits) t.percent],
+                  start: _gaugeDelay + const Duration(milliseconds: 500),
+                ),
+                const SizedBox(height: AppSpacing.lg),
                 for (int i = 0; i < traits.length; i++)
                   Padding(
                     padding: EdgeInsets.only(
@@ -354,10 +359,8 @@ class _OverviewBody extends StatelessWidget {
             title: AppStrings.originalScoring,
             icon: Icons.grid_on_rounded,
             child: Text(
-              '$shaded of ${result.extras['asrsItems'] ?? 6} screener answers '
-              'fell in the shaded '
-              'boxes of the official ASRS form. Under the original scoring '
-              'rule, 4 or more shaded answers was the screening threshold.',
+              '$shaded of ${result.extras['asrsItems'] ?? 6} answers were in '
+              'the shaded boxes (4+ was the original threshold).',
               style: text.bodyMedium?.copyWith(color: context.colors.onSurface),
             ),
           ),
@@ -430,11 +433,25 @@ class _OverviewBody extends StatelessWidget {
             title: AppStrings.thingsToKeepInMind,
             icon: Icons.lightbulb_outline_rounded,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                for (int i = 0; i < report.suggestions.length; i++)
-                  BulletLine(
-                    text: report.suggestions[i],
-                    isLast: i == report.suggestions.length - 1,
+                // Only the first tip is shown; the rest fold away.
+                BulletLine(
+                  text: report.suggestions.first,
+                  isLast: report.suggestions.length == 1,
+                ),
+                if (report.suggestions.length > 1)
+                  ExpandableSection(
+                    title: AppStrings.moreTips(report.suggestions.length - 1),
+                    child: Column(
+                      children: <Widget>[
+                        for (int i = 1; i < report.suggestions.length; i++)
+                          BulletLine(
+                            text: report.suggestions[i],
+                            isLast: i == report.suggestions.length - 1,
+                          ),
+                      ],
+                    ),
                   ),
               ],
             ),
@@ -526,11 +543,10 @@ class _Disclaimer extends StatelessWidget {
                   ),
                 ),
                 if (assessment != null) ...<Widget>[
-                  const SizedBox(height: AppSpacing.sm),
+                  const SizedBox(height: AppSpacing.xs),
                   Text(
-                    '${assessment!.sourceType.label}: '
-                    '${assessment!.sourceType.explanation}',
-                    style: context.textStyles.bodySmall,
+                    assessment!.sourceType.label,
+                    style: context.textStyles.labelSmall,
                   ),
                 ],
               ],

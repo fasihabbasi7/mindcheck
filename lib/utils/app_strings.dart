@@ -16,14 +16,12 @@ class AppStrings {
   static const String onboarding1Title =
       'Understand **yourself**, one question at a time';
   static const String onboarding1Body =
-      'MindCurio guides you through calm, structured questionnaires that help '
-      'you reflect on your personality, habits and emotions.';
+      'Short, calm questionnaires to explore your personality, habits and emotions.';
 
   static const String onboarding2Title =
       'Eleven **assessments**, one quiet space';
   static const String onboarding2Body =
-      'From the Big Five to self-compassion, burnout and mood, each '
-      'assessment ends with a clear, personal report you can revisit anytime.';
+      '11 tests, each ending in a clear personal report.';
 
   static const String onboarding3Title = 'Private by **design**';
   static const String onboarding3Body =
@@ -33,8 +31,7 @@ class AppStrings {
   static const String privacyPointAccount =
       'No account, no sign-up and no internet connection needed.';
   static const String privacyPointDiagnosis =
-      'MindCurio is for self-reflection and education. It cannot diagnose any '
-      'condition, including autism, ADHD, anxiety or personality disorders.';
+      "For self-reflection only. It can't diagnose any condition.";
   static const String privacyPointProfessional =
       'If something worries you, a qualified professional is the right person '
       'to talk to.';
@@ -99,9 +96,7 @@ class AppStrings {
   static const String officialPage = 'Official questionnaire page:';
   static const String startAssessment = 'Start assessment';
   static const String detailsDisclaimer =
-      'Your result describes your own answers at this moment. It is not a '
-      'diagnosis. If any of these experiences are causing you distress, '
-      'please consider talking with a qualified professional.';
+      'Reflects your answers today. Not a diagnosis.';
   // ---------- Instructions ----------
   static const String beforeYouBegin = 'Before you begin';
   static const String begin = 'Begin';
@@ -109,14 +104,11 @@ class AppStrings {
   static const String startOver = 'Start over';
   static const String restartTitle = 'Start over?';
   static const String restartBody =
-      'Your saved answers for this assessment will be deleted and you will '
-      'begin again from the first question.';
-  static const String tipFirstInstinct =
-      'Go with your first instinct. There are no right or wrong answers.';
+      'Your saved answers will be deleted and you will start again.';
+  static const String tipFirstInstinct = 'Go with your first instinct.';
   static const String tipGoBack =
-      'You can go back and change any answer before you submit.';
-  static const String tipPrivate =
-      'Your answers stay on this device and are never uploaded.';
+      'You can change any answer before submitting.';
+  static const String tipPrivate = 'Your answers never leave this phone.';
   static const String loadErrorTitle = 'Could not load questions';
   static const String loadErrorBody =
       'Something went wrong while opening this assessment. Please try again.';
@@ -134,8 +126,7 @@ class AppStrings {
   static const String autoNextShort = 'Auto';
   static const String autoNextLabel = 'Auto-next question';
   static const String autoNextDescription =
-      'Move to the next question automatically after choosing an answer. '
-      'When off, press Next to continue.';
+      'Move on by itself after you pick an answer.';
   static const String autoNextTooltipOn = 'Auto-next is on. Tap to turn off.';
   static const String autoNextTooltipOff =
       'Auto-next is off. Tap to move on automatically after answering.';
@@ -156,8 +147,7 @@ class AppStrings {
   // ---------- Completion ----------
   static const String completeTitle = 'Assessment **complete**';
   static const String completeNote =
-      'Thank you for taking time to reflect. Remember, your result describes '
-      'your answers today, not who you are forever.';
+      'Your result reflects today, not who you are forever.';
   static const String viewResults = 'View my results';
   static const String backToHome = 'Back to home';
   static const String completeFallback =
@@ -177,8 +167,7 @@ class AppStrings {
   static const String createPdf = 'Create PDF';
   static const String shareTitle = 'Share your report?';
   static const String shareBody =
-      'The PDF contains your personal results. It is created on this device '
-      'and only goes where you choose to send or save it.';
+      'Your PDF is made on this phone and only goes where you send it.';
   static const String shareError =
       'The PDF could not be created. Please try again.';
   static const String detailedResults = 'Detailed results';
@@ -187,9 +176,7 @@ class AppStrings {
   static const String reflectOn = 'Reflect on';
   static const String tryThis = 'Try this';
   static const String resultDisclaimer =
-      'This report describes your own answers at one moment in time. It is '
-      'for self-reflection and education, and it is not a diagnosis. If '
-      'anything here worries you, please talk with a qualified professional.';
+      'Reflects your answers right now. Not a diagnosis. If something worries you, talk to a professional.';
   static const String resultNotFoundTitle = 'Report not available';
   static const String resultNotFoundBody =
       'This report could not be found. It may have been deleted.';
@@ -222,8 +209,7 @@ class AppStrings {
   static const String historyJournal = 'Journal';
   static const String noResultsTitle = 'No results yet';
   static const String noResultsBody =
-      'When you complete an assessment, your report is saved here on your '
-      'device so you can revisit and compare it later.';
+      'Finish a test and your report will appear here.';
   static const String noJournalTitle = 'Your journal is empty';
   static const String noJournalBody =
       'Answer the daily reflection question to start a private journal.';
@@ -237,8 +223,7 @@ class AppStrings {
   static const String compareTitle = 'Compared with your last attempt';
   static const String compareTrend = 'Over time';
   static const String compareNote =
-      'Changes show how your answers differ between attempts. They are not a '
-      'measure of clinical improvement or decline.';
+      'Shows how your answers changed, not clinical progress.';
   static const String overallScore = 'Overall';
 
   // ---------- Tabs ----------
@@ -248,12 +233,10 @@ class AppStrings {
   static const String tabSettings = 'Settings';
 
   // ---------- Settings ----------
-  static const String profile = 'Profile';
   static const String yourName = 'Your name';
-  static const String nameNotSet = 'Not set';
   static const String save = 'Save';
   static const String cancel = 'Cancel';
-  static const String assessmentsSettings = 'Assessments';
+  static const String assessmentsSettings = 'Experience';
   static const String appearance = 'Appearance';
   static const String themeSystem = 'System';
   static const String themeLight = 'Light';
@@ -263,8 +246,7 @@ class AppStrings {
   static const String privacyData = 'Privacy & data';
   static const String privacyTitle = 'Privacy information';
   static const String privacyIntro =
-      'MindCurio was built to be private by design. Here is exactly how your '
-      'information is handled.';
+      'Private by design. Tap a topic to learn more.';
   static const String aboutTitle = 'About MindCurio & disclaimer';
   static const String aboutIntro =
       'Understand yourself. Explore your personality, gently and privately.';
@@ -290,19 +272,40 @@ class AppStrings {
   // ---------- Safety support (PHQ-9 question 9) ----------
   static const String safetyTitle = "You don't have to face this alone";
   static const String safetyBody =
-      'You said you have had thoughts of being better off dead or of hurting '
-      'yourself. Please reach out today to someone you trust, a doctor, or a '
-      'helpline. Talking can really help.';
+      'You mentioned thoughts of being better off dead or of hurting yourself. Please reach out today to someone you trust, a doctor or a helpline.';
   static const String safetyEmergency =
       'If you might act on these thoughts or are in danger right now, call '
       'your local emergency number or go to the nearest emergency '
       'department.';
   static const String safetyHelplinesTitle = 'Free, confidential support';
-  static const String safetyHelplinePakistan =
-      'Pakistan · Umang helpline (24/7): 0311 7786264';
+  static const String safetyShowCountries = 'Helplines in other countries';
+  static const String safetyHideCountries = 'Hide other countries';
   static const String safetyHelplineWorld =
       'Anywhere · Find a helpline near you: findahelpline.com';
 
   // ---------- Results reveal ----------
   static const String revealCelebration = 'Report ready';
+
+  // ---------- Read more ----------
+  static const String readMore = 'Read more';
+  static const String showLess = 'Show less';
+  static const String sourceDetails = 'Details & licence';
+  static String moreTips(int n) => n == 1 ? '1 more tip' : '$n more tips';
+
+  // ---------- Effects ----------
+  static const String reduceEffects = 'Reduce effects';
+  static const String reduceEffectsBody =
+      'Turns off 3D, motion and glow effects. Smoother on older phones.';
+  static const String brainHint = 'Tap or drag the brain';
+
+  // ---------- Settings ----------
+  static const String settingsSubtitle = 'Make MindCurio feel like yours.';
+  static const String tapToEditName = 'Tap to change your name';
+  static const String addYourName = 'Add your name';
+  static const String privacySubtitle = 'How your data is kept';
+  static const String aboutSubtitle = 'What MindCurio is, and is not';
+  static const String replaySubtitle = 'See the welcome screens again';
+  static const String deleteAllSubtitle =
+      'Results, journal, bookmarks and name';
+  static const String madeWithCare = 'Made with care · private by design';
 }

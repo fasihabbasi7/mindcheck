@@ -15,6 +15,7 @@ import '../../utils/helpers.dart';
 import '../../widgets/assessment_card.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/empty_state.dart';
+import '../../widgets/expandable.dart';
 import '../../widgets/glass_card.dart';
 import '../../widgets/mind_background.dart';
 import '../../widgets/progress_indicator.dart';
@@ -183,8 +184,9 @@ class _InstructionsBody extends StatelessWidget {
         GlassCard(
           frosted: true,
           padding: const EdgeInsets.all(AppSpacing.xl - 2),
-          child: Text(
+          child: ExpandableText(
             set.instructions,
+            trimLines: 4,
             style: text.bodyLarge,
           ),
         ),
@@ -283,7 +285,7 @@ class _Tip extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Icon(icon, size: 20, color: context.colors.primary),
+          GlowIcon(icon: icon, size: 30),
           const SizedBox(width: AppSpacing.md),
           Expanded(
             child: Text(

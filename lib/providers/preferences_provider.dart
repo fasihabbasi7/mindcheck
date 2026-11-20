@@ -20,6 +20,22 @@ class AutoAdvanceNotifier extends Notifier<bool> {
 final NotifierProvider<AutoAdvanceNotifier, bool> autoAdvanceProvider =
     NotifierProvider<AutoAdvanceNotifier, bool>(AutoAdvanceNotifier.new);
 
+/// "Reduce effects" in Settings: turns off 3D, motion and glow effects.
+/// The app passes it on as Flutter's "disable animations" setting, so every
+/// animated widget that respects reduce motion also respects this switch.
+class ReduceEffectsNotifier extends Notifier<bool> {
+  @override
+  bool build() => ref.read(storageServiceProvider).reduceEffects;
+
+  Future<void> set(bool value) async {
+    state = value;
+    await ref.read(storageServiceProvider).setReduceEffects(value);
+  }
+}
+
+final NotifierProvider<ReduceEffectsNotifier, bool> reduceEffectsProvider =
+    NotifierProvider<ReduceEffectsNotifier, bool>(ReduceEffectsNotifier.new);
+
 /// Assessment ids the user has bookmarked.
 class BookmarksNotifier extends Notifier<Set<String>> {
   @override

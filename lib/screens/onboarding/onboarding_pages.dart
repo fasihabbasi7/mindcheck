@@ -71,7 +71,9 @@ class IntroIllustration extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Stack(
       children: <Widget>[
-        Center(child: HeroBrain(width: 300)),
+        Center(
+          child: HeroBrain(width: 300, interactive: true, spinnable: false),
+        ),
         Align(
           alignment: Alignment(-1, -0.9),
           child: OrbitChip(icon: Icons.fingerprint_rounded, label: 'Personality'),

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,8 +9,8 @@ import 'package:go_router/go_router.dart';
 import '../../app/routes.dart';
 import '../../app/theme/app_theme.dart';
 import '../../models/answer_model.dart';
-import '../../models/assessment_result_model.dart';
 import '../../models/assessment_model.dart';
+import '../../models/assessment_result_model.dart';
 import '../../models/question_model.dart';
 import '../../models/report_model.dart';
 import '../../providers/assessment_provider.dart';
@@ -22,6 +23,9 @@ import '../../widgets/answer_option.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/empty_state.dart';
 import '../../widgets/mind_background.dart';
+import '../../widgets/motion/light_shot.dart';
+import '../../widgets/motion/neural_progress.dart';
+import '../../widgets/motion/reveal.dart';
 import '../../widgets/progress_indicator.dart';
 import '../../widgets/question_card.dart';
 import '../../widgets/safety_support_card.dart';
@@ -49,6 +53,37 @@ class _QuestionScreenState extends ConsumerState<QuestionScreen> {
   /// start a new one while this screen animates away.
   bool _submitted = false;
 
+  // ---------- Neural question flow ----------
+  /// The progress line, so the light from an answer knows where to fly.
+  final GlobalKey _progressKey = GlobalKey();
+
+  /// Where the finger last touched the screen (global coordinates).
+  Offset? _lastTap;
+
+  /// Bumped when the light lands, which makes the progress line flash.
+  int _pulse = 0;
+
+  /// Sends a comet of light from the chosen answer into the progress line.
+  void _shootLight(double progress) {
+    final Offset? from = _lastTap;
+    final RenderBox? box =
+        _progressKey.currentContext?.findRenderObject() as RenderBox?;
+    if (from == null || box == null || !box.hasSize) {
+      setState(() => _pulse++);
+      return;
+    }
+    final Offset to =
+        box.localToGlobal(NeuralProgress.headAt(box.size, progress));
+    fireLightShot(
+      context,
+      from: from,
+      to: to,
+      onArrive: () {
+        if (mounted) setState(() => _pulse++);
+      },
+    );
+  }
+
   @override
   void dispose() {
     _autoAdvance?.cancel();
@@ -66,6 +101,8 @@ class _QuestionScreenState extends ConsumerState<QuestionScreen> {
     _session.answer(question.id, value);
     // A light tick, like a physical switch, confirms the choice.
     HapticFeedback.selectionClick();
+    // ...and a spark of light flies from the answer into the progress line.
+    _shootLight(ref.read(assessmentSessionProvider)?.progress ?? 0);
 
     // Never move on automatically from a safety answer: the support card
     // under the question needs to be seen.
@@ -332,7 +369,11 @@ class _QuestionScreenState extends ConsumerState<QuestionScreen> {
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.screen),
           child: Column(
             children: <Widget>[
-              MindProgressBar(value: session.progress),
+              NeuralProgress(
+                key: _progressKey,
+                value: session.progress,
+                pulse: _pulse,
+              ),
               const SizedBox(height: AppSpacing.sm),
               Row(
                 children: <Widget>[
@@ -358,23 +399,43 @@ class _QuestionScreenState extends ConsumerState<QuestionScreen> {
             duration: AppDurations.medium,
             switchInCurve: Curves.easeOutCubic,
             switchOutCurve: Curves.easeInCubic,
+            // Questions swing like cards in 3D: the old one turns away to
+            // one side while the next turns in from the other.
             transitionBuilder: (Widget child, Animation<double> animation) {
               final bool incoming = child.key == ValueKey<String>(question.id);
-              final double direction =
-                  (_movingForward ? 1 : -1) * (incoming ? 1 : -1);
-              return FadeTransition(
-                opacity: animation,
-                child: SlideTransition(
-                  position: Tween<Offset>(
-                    begin: Offset(0.12 * direction, 0),
-                    end: Offset.zero,
-                  ).animate(animation),
-                  child: child,
-                ),
+              final double direction = _movingForward ? 1 : -1;
+              return AnimatedBuilder(
+                animation: animation,
+                child: child,
+                builder: (BuildContext context, Widget? child) {
+                  final double hidden = 1 - animation.value; // 0 = in place
+                  final double side = incoming ? direction : -direction;
+                  final Matrix4 swing = Matrix4.identity()
+                    ..setEntry(3, 2, 0.0012)
+                    ..rotateY(hidden * 0.85 * side);
+                  return Opacity(
+                    opacity: animation.value.clamp(0.0, 1.0),
+                    child: Transform.translate(
+                      offset: Offset(hidden * 90 * side, hidden * 12),
+                      child: Transform(
+                        alignment: incoming
+                            ? Alignment.centerLeft
+                            : Alignment.centerRight,
+                        transform: swing,
+                        child: Transform.scale(
+                          scale: 1 - hidden * (incoming ? 0.08 : 0.04),
+                          child: child,
+                        ),
+                      ),
+                    ),
+                  );
+                },
               );
             },
-            child: ListView(
+            child: Listener(
               key: ValueKey<String>(question.id),
+              onPointerDown: (PointerDownEvent e) => _lastTap = e.position,
+              child: ListView(
               padding: const EdgeInsets.fromLTRB(
                 AppSpacing.screen,
                 AppSpacing.sm,
@@ -389,14 +450,19 @@ class _QuestionScreenState extends ConsumerState<QuestionScreen> {
                   section: question.section,
                 ),
                 const SizedBox(height: AppSpacing.lg),
-                for (final ScaleOption option
-                    in set.optionsFor(question)) ...<Widget>[
-                  AnswerOption(
-                    label: option.label,
-                    selected: selected == option.value,
-                    shaded: hasShading &&
-                        option.value >= question.shadedFromValue!,
-                    onTap: () => _select(set, session, option.value),
+                for (final (int i, ScaleOption option)
+                    in set.optionsFor(question).indexed) ...<Widget>[
+                  // Answers rise in one after another.
+                  Reveal(
+                    delay: Duration(milliseconds: 120 + 55 * math.min(i, 6)),
+                    offset: 16,
+                    child: AnswerOption(
+                      label: option.label,
+                      selected: selected == option.value,
+                      shaded: hasShading &&
+                          option.value >= question.shadedFromValue!,
+                      onTap: () => _select(set, session, option.value),
+                    ),
                   ),
                   const SizedBox(height: AppSpacing.sm + 2),
                 ],
@@ -415,6 +481,7 @@ class _QuestionScreenState extends ConsumerState<QuestionScreen> {
                     ),
                   ),
               ],
+            ),
             ),
           ),
         ),

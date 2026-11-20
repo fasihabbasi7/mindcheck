@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../app/theme/app_theme.dart';
+import 'motion/aurora_background.dart';
 import 'motion/floating_particles.dart';
 
 /// The soft lavender background used behind every screen.
@@ -9,17 +10,32 @@ import 'motion/floating_particles.dart';
 /// It draws a vertical gradient plus two blurred "glows" and also makes the
 /// status bar icons dark or light depending on the theme.
 ///
-/// Set [particles] to add slowly drifting specks of light. Use it on a few
-/// "showcase" screens (Home, onboarding, results), not everywhere.
+/// A flowing aurora of light moves gently behind every screen (turn off
+/// with [aurora]: false). Set [particles] to add slowly drifting specks of
+/// light. Use it on a few "showcase" screens (Home, onboarding, results).
 class MindBackground extends StatelessWidget {
   const MindBackground({
     super.key,
     required this.child,
     this.particles = false,
+    this.aurora = true,
   });
 
   final Widget child;
   final bool particles;
+  final bool aurora;
+
+  // Aurora colours: lavender, rose and sky, brighter in dark mode.
+  static const List<Color> _auroraLight = <Color>[
+    Color(0xFFB9AEF5),
+    Color(0xFFF5BDD9),
+    Color(0xFFA8D8F5),
+  ];
+  static const List<Color> _auroraDark = <Color>[
+    Color(0xFF7565D8),
+    Color(0xFFB0509A),
+    Color(0xFF3A78D8),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +59,13 @@ class MindBackground extends StatelessWidget {
         ),
         child: Stack(
           children: <Widget>[
+            if (aurora)
+              Positioned.fill(
+                child: AuroraBackground(
+                  colors: isDark ? _auroraDark : _auroraLight,
+                  intensity: isDark ? 0.42 : 0.38,
+                ),
+              ),
             _Glow(
               color: mind.glow,
               size: 340,

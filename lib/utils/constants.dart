@@ -45,6 +45,7 @@ class StorageKeys {
   static const String themeMode = 'theme_mode';
   static const String userName = 'user_name';
   static const String autoAdvance = 'auto_advance';
+  static const String reduceEffects = 'reduce_effects';
   static const String bookmarks = 'bookmarks';
   static const String savedSessions = 'saved_sessions';
 }

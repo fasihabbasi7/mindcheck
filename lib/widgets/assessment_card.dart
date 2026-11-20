@@ -43,7 +43,32 @@ class AssessmentIcon extends StatelessWidget {
           ),
         ],
       ),
-      child: Icon(assessment.icon, size: size * 0.48, color: Colors.white),
+      child: Stack(
+        alignment: Alignment.center,
+        children: <Widget>[
+          // Glossy top highlight, like a glass sweet.
+          Positioned(
+            top: size * 0.06,
+            left: size * 0.12,
+            right: size * 0.12,
+            height: size * 0.4,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(size * 0.3),
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: <Color>[
+                    Colors.white.withValues(alpha: 0.55),
+                    Colors.white.withValues(alpha: 0),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Icon(assessment.icon, size: size * 0.48, color: Colors.white),
+        ],
+      ),
     );
   }
 }
@@ -60,8 +85,16 @@ class MetaChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       decoration: BoxDecoration(
-        color: context.colors.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(AppRadius.pill),
+        gradient: LinearGradient(
+          colors: <Color>[
+            context.colors.primary.withValues(alpha: 0.10),
+            context.colors.primary.withValues(alpha: 0.04),
+          ],
+        ),
+        border: Border.all(
+          color: context.colors.primary.withValues(alpha: 0.18),
+        ),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -162,6 +195,7 @@ class AssessmentCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GlassCard(
       onTap: () => openAssessment(context, assessment),
+      accent: assessment.colors.last,
       padding: const EdgeInsets.all(AppSpacing.lg),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -223,6 +257,7 @@ class AssessmentTile extends StatelessWidget {
       width: 164,
       child: GlassCard(
         onTap: () => openAssessment(context, assessment),
+        accent: assessment.colors.last,
         padding: const EdgeInsets.all(AppSpacing.lg),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -258,6 +293,7 @@ class FeaturedAssessmentCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GlassCard(
       frosted: true,
+      accent: assessment.colors.last,
       onTap: () => openAssessment(context, assessment),
       padding: const EdgeInsets.all(AppSpacing.xl - 2),
       child: Column(
@@ -271,6 +307,13 @@ class FeaturedAssessmentCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(AppRadius.pill),
                   gradient: LinearGradient(colors: assessment.colors),
+                  boxShadow: <BoxShadow>[
+                    BoxShadow(
+                      color: assessment.colors.last.withValues(alpha: 0.45),
+                      blurRadius: 12,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
                 ),
                 child: Text(
                   'FEATURED',

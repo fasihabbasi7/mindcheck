@@ -159,7 +159,7 @@ class _TopBar extends StatelessWidget {
         height: 48,
         child: Row(
           children: <Widget>[
-            const BrandLogo(width: 118),
+            const BrandLogo(width: 140),
             const Spacer(),
             AnimatedOpacity(
               opacity: showSkip ? 1 : 0,

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../app/routes.dart';
+import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
 import '../../models/assessment_model.dart';
 import '../../models/assessment_result_model.dart';
@@ -290,13 +291,22 @@ class _ResultTile extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
               decoration: BoxDecoration(
-                color: context.colors.primaryContainer,
                 borderRadius: BorderRadius.circular(AppRadius.pill),
+                gradient: const LinearGradient(
+                  colors: <Color>[AppColors.secondary, AppColors.primary],
+                ),
+                boxShadow: <BoxShadow>[
+                  BoxShadow(
+                    color: AppColors.primary.withValues(alpha: 0.3),
+                    blurRadius: 10,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
               ),
               child: Text(
                 '${overall.display}/${overall.max.round()}',
                 style: context.textStyles.labelMedium?.copyWith(
-                  color: context.colors.onPrimaryContainer,
+                  color: Colors.white,
                   fontWeight: FontWeight.w700,
                 ),
               ),

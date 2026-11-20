@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../app/theme/app_theme.dart';
 import '../utils/app_strings.dart';
 import '../utils/constants.dart';
+import 'motion/glow_edge.dart';
 
 /// One tab in the bottom navigation bar.
 class NavItem {
@@ -64,34 +65,62 @@ class MindBottomNav extends StatelessWidget {
       minimum: const EdgeInsets.only(bottom: 12),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.screen),
+        // Glowing glass bar, matching the cards.
         child: Container(
           height: 68,
-          padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: context.colors.surface,
             borderRadius: BorderRadius.circular(AppRadius.pill),
-            border: Border.all(color: mind.glassBorder),
             boxShadow: <BoxShadow>[
               BoxShadow(
-                color: mind.cardShadow,
+                color: context.colors.primary.withValues(
+                  alpha: context.isDarkMode ? 0.3 : 0.18,
+                ),
                 blurRadius: 30,
-                offset: const Offset(0, 10),
+                spreadRadius: -4,
+                offset: const Offset(0, 12),
+              ),
+              BoxShadow(
+                color: mind.cardShadow,
+                blurRadius: 12,
+                offset: const Offset(0, 4),
               ),
             ],
           ),
-          child: Row(
-            children: <Widget>[
-              for (int i = 0; i < items.length; i++)
-                Expanded(
-                  // The selected tab gets more room for its label.
-                  flex: i == currentIndex ? 2 : 1,
-                  child: _NavButton(
-                    item: items[i],
-                    selected: i == currentIndex,
-                    onTap: () => onTap(i),
-                  ),
+          child: GlowEdge(
+            radius: AppRadius.pill,
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(AppRadius.pill),
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: <Color>[
+                    Color.alphaBlend(
+                      Colors.white.withValues(
+                        alpha: context.isDarkMode ? 0.08 : 0.6,
+                      ),
+                      context.colors.surface,
+                    ),
+                    context.colors.surface,
+                  ],
                 ),
-            ],
+              ),
+              child: Row(
+                children: <Widget>[
+                  for (int i = 0; i < items.length; i++)
+                    Expanded(
+                      // The selected tab gets more room for its label.
+                      flex: i == currentIndex ? 2 : 1,
+                      child: _NavButton(
+                        item: items[i],
+                        selected: i == currentIndex,
+                        onTap: () => onTap(i),
+                      ),
+                    ),
+                ],
+              ),
+            ),
           ),
         ),
       ),

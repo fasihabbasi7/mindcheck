@@ -24,6 +24,7 @@ class ScoreGauge extends StatelessWidget {
     this.size = 190,
     this.delay = Duration.zero,
     this.onComplete,
+    this.assemble = false,
   });
 
   /// 0.0 to 1.0
@@ -33,6 +34,10 @@ class ScoreGauge extends StatelessWidget {
   final double? countTo;
   final double size;
   final Duration delay;
+
+  /// Cinematic intro: a swarm of light particles swirls in during [delay]
+  /// and settles exactly where the ring then fills.
+  final bool assemble;
 
   /// Called once the count-up has finished.
   final VoidCallback? onComplete;
@@ -44,48 +49,225 @@ class ScoreGauge extends StatelessWidget {
     return Semantics(
       label: '$valueText $caption',
       excludeSemantics: true,
-      child: DelayedProgress(
-        delay: delay,
-        duration: const Duration(milliseconds: 1400),
-        onComplete: onComplete,
-        builder: (BuildContext context, double progress) {
-          final double? count = countTo;
-          final String shown = count == null || progress >= 1
-              ? valueText
-              : (count * progress).round().toString();
-          return SizedBox(
-            width: size,
-            height: size * 0.78,
-            child: CustomPaint(
-              painter: _GaugePainter(
-                fraction: target * progress,
-                track: context.colors.primary.withValues(alpha: 0.14),
-              ),
-              child: Padding(
-                padding: EdgeInsets.only(top: size * 0.22),
-                child: Column(
-                  children: <Widget>[
-                    Text(
-                      shown,
-                      style: context.textStyles.displayMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                        height: 1,
-                        fontFeatures: const <FontFeature>[
-                          FontFeature.tabularFigures(),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(caption, style: context.textStyles.labelSmall),
-                  ],
-                ),
-              ),
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: <Widget>[
+          _gauge(context, target),
+          if (assemble)
+            Positioned.fill(
+              child: GaugeAssembly(fraction: target, arriveAfter: delay),
             ),
-          );
-        },
+        ],
       ),
     );
   }
+
+  Widget _gauge(BuildContext context, double target) {
+    return DelayedProgress(
+      delay: delay,
+      duration: const Duration(milliseconds: 1400),
+      onComplete: onComplete,
+      builder: (BuildContext context, double progress) {
+        final double? count = countTo;
+        final String shown = count == null || progress >= 1
+            ? valueText
+            : (count * progress).round().toString();
+        return SizedBox(
+          width: size,
+          height: size * 0.78,
+          child: CustomPaint(
+            painter: _GaugePainter(
+              fraction: target * progress,
+              track: context.colors.primary.withValues(alpha: 0.14),
+            ),
+            child: Padding(
+              padding: EdgeInsets.only(top: size * 0.22),
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    shown,
+                    style: context.textStyles.displayMedium?.copyWith(
+                      fontWeight: FontWeight.w600,
+                      height: 1,
+                      fontFeatures: const <FontFeature>[
+                        FontFeature.tabularFigures(),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(caption, style: context.textStyles.labelSmall),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+/// A swarm of light particles that spirals in from around the card and
+/// lands on the gauge ring at the moment it starts to fill ([arriveAfter]),
+/// then melts into it.
+class GaugeAssembly extends StatefulWidget {
+  const GaugeAssembly({
+    super.key,
+    required this.fraction,
+    required this.arriveAfter,
+    this.count = 70,
+  });
+
+  final double fraction;
+  final Duration arriveAfter;
+  final int count;
+
+  @override
+  State<GaugeAssembly> createState() => _GaugeAssemblyState();
+}
+
+class _GaugeAssemblyState extends State<GaugeAssembly>
+    with SingleTickerProviderStateMixin {
+  static const Duration _melt = Duration(milliseconds: 450);
+
+  late final AnimationController _controller = AnimationController(
+    vsync: this,
+    duration: widget.arriveAfter + _melt,
+  );
+  final List<_Mote> _motes = <_Mote>[];
+  bool _started = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_started) return;
+    _started = true;
+    if (reduceMotionOf(context) || widget.arriveAfter == Duration.zero) return;
+    final math.Random random = math.Random(11);
+    for (int i = 0; i < widget.count; i++) {
+      _motes.add(_Mote(
+        startAngle: random.nextDouble() * math.pi * 2,
+        startRadius: 1.0 + random.nextDouble() * 0.9,
+        slot: random.nextDouble(),
+        swirl: random.nextBool() ? 1 : -1,
+        delay: random.nextDouble() * 0.25,
+        size: 1.6 + random.nextDouble() * 2.4,
+        colour: <Color>[
+          Colors.white,
+          AppColors.secondary,
+          AppColors.primary,
+          const Color(0xFFF6C4F3),
+        ][i % 4],
+      ));
+    }
+    _controller.forward();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_motes.isEmpty) return const SizedBox.shrink();
+    final double arrive = widget.arriveAfter.inMilliseconds /
+        (widget.arriveAfter + _melt).inMilliseconds;
+    return IgnorePointer(
+      child: CustomPaint(
+        painter: _AssemblyPainter(
+          animation: _controller,
+          motes: _motes,
+          fraction: widget.fraction,
+          arrive: arrive,
+        ),
+      ),
+    );
+  }
+}
+
+class _Mote {
+  const _Mote({
+    required this.startAngle,
+    required this.startRadius,
+    required this.slot,
+    required this.swirl,
+    required this.delay,
+    required this.size,
+    required this.colour,
+  });
+
+  final double startAngle;
+
+  /// Start distance, as a multiple of the gauge width.
+  final double startRadius;
+
+  /// Where on the filled part of the ring it lands (0 = start, 1 = end).
+  final double slot;
+  final int swirl;
+  final double delay;
+  final double size;
+  final Color colour;
+}
+
+class _AssemblyPainter extends CustomPainter {
+  _AssemblyPainter({
+    required this.animation,
+    required this.motes,
+    required this.fraction,
+    required this.arrive,
+  }) : super(repaint: animation);
+
+  final Animation<double> animation;
+  final List<_Mote> motes;
+  final double fraction;
+
+  /// Point in the animation (0–1) at which the motes reach the ring.
+  final double arrive;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final double v = animation.value;
+    if (v >= 1) return;
+    final double w = size.width;
+    final Offset centre = Offset(w / 2, w / 2);
+    final double ring = w / 2 - w * 0.075;
+    // Land on the part of the ring that will light up (at least a sliver).
+    final double sweep = _GaugePainter._sweep * math.max(fraction, 0.08);
+
+    for (final _Mote m in motes) {
+      final double local =
+          ((v / arrive - m.delay) / (1 - m.delay)).clamp(0.0, 1.0);
+      final double e = Curves.easeInOutCubic.transform(local);
+      final double targetAngle = _GaugePainter._start + sweep * m.slot;
+      // Spiral in: the angle winds round once while the radius shrinks.
+      final double angle = m.startAngle +
+          (targetAngle - m.startAngle + m.swirl * math.pi * 2) * e;
+      final double radius = m.startRadius * w * (1 - e) + ring * e;
+      final Offset p = centre + Offset(math.cos(angle), math.sin(angle)) * radius;
+
+      final double appear = (local * 4).clamp(0.0, 1.0);
+      final double melt = v > arrive ? 1 - (v - arrive) / (1 - arrive) : 1;
+      final double alpha = (appear * melt).clamp(0.0, 1.0);
+      if (alpha <= 0) continue;
+
+      canvas.drawCircle(
+        p,
+        m.size * 2.2,
+        Paint()
+          ..color = m.colour.withValues(alpha: 0.35 * alpha)
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4),
+      );
+      canvas.drawCircle(
+        p,
+        m.size * (0.6 + 0.4 * (1 - e)),
+        Paint()..color = m.colour.withValues(alpha: alpha),
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(_AssemblyPainter old) => old.fraction != fraction;
 }
 
 class _GaugePainter extends CustomPainter {

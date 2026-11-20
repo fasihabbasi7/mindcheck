@@ -6,8 +6,8 @@ import 'package:go_router/go_router.dart';
 
 import '../../app/routes.dart';
 import '../../app/theme/app_theme.dart';
-import '../../models/assessment_model.dart';
 import '../../models/answer_model.dart';
+import '../../models/assessment_model.dart';
 import '../../models/assessment_result_model.dart';
 import '../../models/journal_entry_model.dart';
 import '../../providers/assessment_provider.dart';
@@ -76,7 +76,7 @@ class HomeScreen extends ConsumerWidget {
               _Padded(
                 child: Row(
                   children: <Widget>[
-                    const BrandLogo(width: 124),
+                    const BrandLogo(width: 150),
                     const Spacer(),
                     CircleIconButton(
                       icon: Icons.settings_outlined,
@@ -288,18 +288,7 @@ class _NoRecentResults extends StatelessWidget {
     return GlassCard(
       child: Row(
         children: <Widget>[
-          Container(
-            width: 44,
-            height: 44,
-            decoration: BoxDecoration(
-              color: context.colors.primaryContainer,
-              borderRadius: BorderRadius.circular(AppRadius.sm),
-            ),
-            child: Icon(
-              Icons.insights_rounded,
-              color: context.colors.primary,
-            ),
-          ),
+          const GlowIcon(icon: Icons.insights_rounded, size: 44),
           const SizedBox(width: AppSpacing.md + 2),
           Expanded(
             child: Column(
@@ -371,7 +360,7 @@ class _HeroSection extends StatelessWidget {
                 // Drifts down more slowly than the page when scrolling,
                 // so the brain seems to float behind the cards.
                 child: ScrollParallax(
-                  child: HeroBrain(width: brainWidth),
+                  child: HeroBrain(width: brainWidth, interactive: true),
                 ),
               ),
               Positioned.fill(

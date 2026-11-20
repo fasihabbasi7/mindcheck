@@ -117,6 +117,7 @@ For each:
 - [ ] Burnout: questions 7–9 show "To a very low degree … To a very high degree"; the others show "Never / almost never … Always".
 - [ ] Low Mood: on question 9, choose "Several days". The support card appears at once under the answers, and Auto-next does NOT move on.
 - [ ] Finish Low Mood with question 9 above "Not at all": the support card is at the top of the report and in the PDF, and there is no celebration.
+- [ ] Safety card: the first helpline matches your phone's region (Settings → System → Languages & region). "Helplines in other countries" opens the full list.
 - [ ] Low Mood with every answer "More than half the days" shows 18 out of 27, "Moderately severe symptoms".
 
 ## 12. Motion and haptics
@@ -128,3 +129,14 @@ For each:
 - [ ] Scroll Home slowly: the brain moves more slowly than the cards.
 - [ ] Soft specks drift on Home, onboarding, completion and reports.
 - [ ] With "Remove animations" on: no tilt, parallax, specks, count-up or sparkles; everything still appears.
+
+## 13. Wow effects and shorter text
+
+- [ ] Run `flutter pub get` first (new package: sensors_plus; new shader: shaders/aurora.frag).
+- [ ] Aurora: soft coloured light slowly flows behind every screen, in light and dark mode.
+- [ ] Living brain (Home): tilt the phone and the brain leans in 3D; drag it sideways to spin it; tap it and sparks fire from your finger with a light tap. Vertical scrolling still works over it.
+- [ ] Onboarding page 1: the brain leans and reacts to taps; swiping still changes the page.
+- [ ] Questions: each new question swings in like a card; answers rise in one by one; choosing an answer sends a streak of light into the glowing progress line, which flashes.
+- [ ] Fresh report: light particles swirl in and land on the score ring, then it counts up; in "Your profile" the brain regions light up one by one with the bars.
+- [ ] Settings → Reduce effects: all of the above turns off; everything still appears and works.
+- [ ] Long texts show 2–4 lines with "Read more"; sources, extra tips and privacy topics open when tapped.

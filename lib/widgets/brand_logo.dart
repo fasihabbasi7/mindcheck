@@ -14,7 +14,7 @@ class BrandLogo extends StatelessWidget {
   static const String _markAsset = 'assets/images/logo_mark.png';
 
   /// Width / height of each image file.
-  static const double _fullAspect = 2597 / 998;
+  static const double _fullAspect = 1843 / 399;
   static const double _markAspect = 1083 / 998;
 
   final double width;
@@ -34,8 +34,9 @@ class BrandLogo extends StatelessWidget {
         height: width / aspect,
         fit: BoxFit.contain,
         filterQuality: FilterQuality.medium,
-        // The file is the brand indigo; recolour it only in dark mode.
-        color: context.isDarkMode ? const Color(0xFFB8B6FF) : null,
+        // The file uses the brand lavender gradient; in dark mode it is
+        // drawn in one light lavender so it stays readable.
+        color: context.isDarkMode ? const Color(0xFFC9C2FF) : null,
         colorBlendMode: BlendMode.srcIn,
       ),
     );

@@ -26,6 +26,7 @@ class StorageService {
           StorageKeys.themeMode,
           StorageKeys.userName,
           StorageKeys.autoAdvance,
+          StorageKeys.reduceEffects,
           StorageKeys.bookmarks,
           StorageKeys.savedSessions,
         },
@@ -72,6 +73,13 @@ class StorageService {
 
   Future<void> setAutoAdvance(bool value) =>
       _prefs.setBool(StorageKeys.autoAdvance, value);
+
+  /// "Reduce effects" switch in Settings. Off by default.
+  bool get reduceEffects =>
+      _prefs.getBool(StorageKeys.reduceEffects) ?? false;
+
+  Future<void> setReduceEffects(bool value) =>
+      _prefs.setBool(StorageKeys.reduceEffects, value);
 
   // ---------- Bookmarks ----------
 

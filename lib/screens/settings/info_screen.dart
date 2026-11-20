@@ -5,6 +5,7 @@ import '../../app/theme/app_theme.dart';
 import '../../utils/app_strings.dart';
 import '../../utils/constants.dart';
 import '../../widgets/custom_button.dart';
+import '../../widgets/expandable.dart';
 import '../../widgets/glass_card.dart';
 import '../../widgets/mind_background.dart';
 
@@ -58,29 +59,21 @@ class InfoScreen extends StatelessWidget {
               const SizedBox(height: AppSpacing.xl),
               for (final (IconData icon, String title, String body)
                   in sections) ...<Widget>[
+                // Each topic shows its title; tap to read more.
                 GlassCard(
-                  padding: const EdgeInsets.all(AppSpacing.lg + 2),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Icon(icon, color: context.colors.primary),
-                      const SizedBox(width: AppSpacing.md),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(title, style: context.textStyles.titleSmall),
-                            const SizedBox(height: 4),
-                            Text(
-                              body,
-                              style: context.textStyles.bodyMedium?.copyWith(
-                                color: context.colors.onSurface,
-                              ),
-                            ),
-                          ],
-                        ),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppSpacing.lg + 2,
+                    vertical: AppSpacing.md,
+                  ),
+                  child: ExpandableSection(
+                    icon: icon,
+                    title: title,
+                    child: Text(
+                      body,
+                      style: context.textStyles.bodyMedium?.copyWith(
+                        color: context.colors.onSurface,
                       ),
-                    ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: AppSpacing.md),
@@ -157,10 +150,10 @@ class InfoScreen extends StatelessWidget {
     (
       Icons.verified_outlined,
       'Where the questions come from',
-      'Some assessments use published questionnaires (IPIP, Rosenberg, '
-          'GAD-7 and the ASRS v1.1 screener), credited on each assessment. '
-          'Others use questions written for MindCurio and are clearly '
-          'labelled as not scientifically validated.',
+      'Some tests use published questionnaires (IPIP, Rosenberg, GAD-7, '
+          'ASRS, Self-Compassion Scale, Copenhagen Burnout Inventory and '
+          'PHQ-9), credited on each test. Others use questions written for '
+          'MindCurio, clearly labelled as not validated.',
     ),
     (
       Icons.support_agent_rounded,
