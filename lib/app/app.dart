@@ -7,9 +7,9 @@ import '../utils/app_strings.dart';
 import 'routes.dart';
 import 'theme/app_theme.dart';
 
-/// The root widget of MindCheck.
-class MindCheckApp extends ConsumerWidget {
-  const MindCheckApp({super.key});
+/// The root widget of MindCurio.
+class MindCurioApp extends ConsumerWidget {
+  const MindCurioApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

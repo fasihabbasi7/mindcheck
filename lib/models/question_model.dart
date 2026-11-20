@@ -84,7 +84,7 @@ class QuestionModel {
   /// Reverse-scored: agreeing lowers the trait score instead of raising it.
   final bool reverse;
 
-  /// Where the wording comes from, e.g. "GAD-7" or "MindCheck".
+  /// Where the wording comes from, e.g. "GAD-7" or "MindCurio".
   final String source;
 
   /// Only for the ASRS screener: answers with this value or higher are

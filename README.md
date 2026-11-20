@@ -1,3 +1,3 @@
-# mind_check
+# MindCurio
 
-A new Flutter project.
+MindCurio - private, offline self-discovery assessments.

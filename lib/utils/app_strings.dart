@@ -5,7 +5,7 @@
 class AppStrings {
   AppStrings._();
 
-  static const String appName = 'MindCheck';
+  static const String appName = 'MindCurio';
   static const String tagline = 'Understand yourself. Explore your personality.';
 
   // ---------- Onboarding ----------
@@ -16,7 +16,7 @@ class AppStrings {
   static const String onboarding1Title =
       'Understand **yourself**, one question at a time';
   static const String onboarding1Body =
-      'MindCheck guides you through calm, structured questionnaires that help '
+      'MindCurio guides you through calm, structured questionnaires that help '
       'you reflect on your personality, habits and emotions.';
 
   static const String onboarding2Title =
@@ -27,19 +27,19 @@ class AppStrings {
 
   static const String onboarding3Title = 'Private by **design**';
   static const String onboarding3Body =
-      'Before you begin, here is how MindCheck treats your answers.';
+      'Before you begin, here is how MindCurio treats your answers.';
   static const String privacyPointDevice =
       'Your answers and results stay on this device.';
   static const String privacyPointAccount =
       'No account, no sign-up and no internet connection needed.';
   static const String privacyPointDiagnosis =
-      'MindCheck is for self-reflection and education. It cannot diagnose any '
+      'MindCurio is for self-reflection and education. It cannot diagnose any '
       'condition, including autism, ADHD, anxiety or personality disorders.';
   static const String privacyPointProfessional =
       'If something worries you, a qualified professional is the right person '
       'to talk to.';
   static const String disclaimerAgree =
-      'I understand that MindCheck is not a medical or diagnostic tool.';
+      'I understand that MindCurio is not a medical or diagnostic tool.';
 
   // ---------- Home ----------
   static const String homeQuestion = 'How are you **feeling today**?';
@@ -83,7 +83,7 @@ class AppStrings {
       'Try a different word, or clear the search and filters.';
   static const String clearFilters = 'Clear search';
   static const String exploreFootnote =
-      'MindCheck is for self-reflection and education. '
+      'MindCurio is for self-reflection and education. '
       'It does not diagnose any condition.';
 
   // ---------- Assessment details ----------
@@ -263,9 +263,9 @@ class AppStrings {
   static const String privacyData = 'Privacy & data';
   static const String privacyTitle = 'Privacy information';
   static const String privacyIntro =
-      'MindCheck was built to be private by design. Here is exactly how your '
+      'MindCurio was built to be private by design. Here is exactly how your '
       'information is handled.';
-  static const String aboutTitle = 'About MindCheck & disclaimer';
+  static const String aboutTitle = 'About MindCurio & disclaimer';
   static const String aboutIntro =
       'Understand yourself. Explore your personality, gently and privately.';
   static const String deleteHistoryTitle = 'Delete assessment history';

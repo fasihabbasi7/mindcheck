@@ -63,7 +63,7 @@ class OnboardingPage extends StatelessWidget {
   }
 }
 
-/// Page 1: the brain surrounded by the things MindCheck helps you explore.
+/// Page 1: the brain surrounded by the things MindCurio helps you explore.
 class IntroIllustration extends StatelessWidget {
   const IntroIllustration({super.key});
 

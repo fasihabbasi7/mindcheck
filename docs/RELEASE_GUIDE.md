@@ -1,6 +1,6 @@
-# MindCheck – Release Guide
+# MindCurio – Release Guide
 
-App ID: **com.mindcheck.app** (Android and iOS). Never change it after the
+App ID: **com.mindcurio.app** (Android and iOS). Never change it after the
 first release. Version: set `version:` in `pubspec.yaml`
 (`1.0.0+1` means version name 1.0.0, build number 1). Increase the build
 number for every upload, and keep `AppInfo.version` in
@@ -13,7 +13,7 @@ number for every upload, and keep `AppInfo.version` in
 Run in a terminal (Windows):
 
 ```
-keytool -genkey -v -keystore %USERPROFILE%\mindcheck-upload.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+keytool -genkey -v -keystore %USERPROFILE%\mindcurio-upload.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 ```
 
 Choose a strong password and **back up the .jks file and password safely**.
@@ -27,7 +27,7 @@ Create `android/key.properties` (it is already ignored by git, never share it):
 storePassword=YOUR_STORE_PASSWORD
 keyPassword=YOUR_KEY_PASSWORD
 keyAlias=upload
-storeFile=C:\\Users\\YOU\\mindcheck-upload.jks
+storeFile=C:\\Users\\YOU\\mindcurio-upload.jks
 ```
 
 `android/app/build.gradle.kts` already reads this file. Without it, release
@@ -44,7 +44,7 @@ Console.
 
 ### 4. Play Console notes
 
-- **Data safety form:** MindCheck collects no data and shares no data;
+- **Data safety form:** MindCurio collects no data and shares no data;
   everything is stored on the device. No internet permission is used in
   release builds.
 - **Health apps declaration:** describe it as a self-reflection and
@@ -63,7 +63,7 @@ Requires a Mac with Xcode and an Apple Developer account.
 
 1. Open `ios/Runner.xcworkspace` in Xcode.
 2. Runner → Signing & Capabilities: choose your Team. The bundle ID is
-   already `com.mindcheck.app`.
+   already `com.mindcurio.app`.
 3. `flutter build ipa --release`, then upload with Xcode Organizer or
    Transporter.
 4. App Privacy section: "Data Not Collected".

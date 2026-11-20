@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// MindCheck's page transition: the new page fades in while lifting
+/// MindCurio's page transition: the new page fades in while lifting
 /// slightly and growing from 96% to full size, and the page underneath
 /// sinks back a little. Calm, with a sense of depth.
 class MindPageTransition extends StatelessWidget {

@@ -10,7 +10,7 @@ import '../../utils/constants.dart';
 import '../../widgets/brand_logo.dart';
 import '../../widgets/mind_background.dart';
 
-/// Brand intro shown on launch: the MindCheck logo animates in with a soft
+/// Brand intro shown on launch: the MindCurio logo animates in with a soft
 /// glow, then the tagline. Afterwards it opens onboarding (first launch)
 /// or the home screen (returning users).
 class SplashScreen extends ConsumerStatefulWidget {

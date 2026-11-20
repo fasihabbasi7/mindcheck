@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 
 import '../models/assessment_model.dart';
 
-/// The eleven MindCheck assessments.
+/// The eleven MindCurio assessments.
 ///
 /// Licensing was checked before choosing each source (November 2026):
 /// * IPIP items are public domain, free for any use, commercial included.
 /// * Rosenberg Self-Esteem Scale: public domain (University of Maryland).
 /// * GAD-7: no permission required to reproduce, display or distribute.
-///   (Self-Esteem and Anxiety add MindCheck questions to Rosenberg and GAD-7
+///   (Self-Esteem and Anxiety add MindCurio questions to Rosenberg and GAD-7
 ///   and score them together, so they are labelled "Adapted questionnaire".)
 /// * ASRS v1.1 6-question screener: free, including commercial use, with
 ///   attribution and the copyright notice; the wording must not be changed.
 /// * The Autism Spectrum Quotient (AQ) may not be used commercially and the
 ///   Narcissistic Personality Inventory (NPI) has no clear free licence, so
-///   MindCheck uses its own clearly labelled self-reflection questions for
+///   MindCurio uses its own clearly labelled self-reflection questions for
 ///   those two topics.
 /// * Self-Compassion Scale (Neff, 2003): free for research or any other use.
-/// * IPIP Optimism scale: public domain. MindCheck adds 10 of its own
+/// * IPIP Optimism scale: public domain. MindCurio adds 10 of its own
 ///   "bouncing back" questions, so it is labelled "Adapted questionnaire".
 /// * Copenhagen Burnout Inventory: freely available from the NFA (Denmark)
-///   with attribution. MindCheck uses the personal and work-related scales.
+///   with attribution. MindCurio uses the personal and work-related scales.
 /// * PHQ-9: no permission required to reproduce, translate, display or
 ///   distribute. Question 9 triggers support information when answered.
 ///
@@ -95,7 +95,7 @@ const List<AssessmentModel> assessmentCatalog = <AssessmentModel>[
     description:
         'Self-esteem is your overall sense of your own worth. This '
         'assessment combines the classic Rosenberg Self-Esteem Scale with '
-        'extra MindCheck questions on confidence, boundaries and your inner '
+        'extra MindCurio questions on confidence, boundaries and your inner '
         'voice. Self-esteem naturally changes over time, so treat the result '
         'as a snapshot of right now.',
     explores: <String>[
@@ -114,11 +114,11 @@ const List<AssessmentModel> assessmentCatalog = <AssessmentModel>[
     answerFormat: '4 options, from Strongly agree to Strongly disagree',
     resultLabel: 'Self-esteem profile across six areas',
     sourceType: SourceType.adaptedQuestionnaire,
-    sourceName: 'Rosenberg Self-Esteem Scale + MindCheck questions',
+    sourceName: 'Rosenberg Self-Esteem Scale + MindCurio questions',
     citation:
         'Questions 1–10: Rosenberg, M. (1965). Society and the Adolescent '
         'Self-Image. Princeton University Press. Public domain. '
-        'Questions 11–25: written for MindCheck. Because the questions are '
+        'Questions 11–25: written for MindCurio. Because the questions are '
         'scored together, the result is not a Rosenberg scale score.',
     keywords: <String>['confidence', 'self worth', 'rosenberg', 'boundaries'],
   ),
@@ -130,7 +130,7 @@ const List<AssessmentModel> assessmentCatalog = <AssessmentModel>[
         'This assessment asks how often you have been bothered by common '
         'anxiety-related experiences, such as worry, overthinking, physical '
         'tension and difficulty relaxing. It combines the GAD-7 questions '
-        'with extra MindCheck questions, so the result describes your '
+        'with extra MindCurio questions, so the result describes your '
         'experiences and cannot screen for or diagnose an anxiety disorder.',
     explores: <String>[
       'Worry & overthinking',
@@ -148,13 +148,13 @@ const List<AssessmentModel> assessmentCatalog = <AssessmentModel>[
     answerFormat: '4 options, from Not at all to Nearly every day',
     resultLabel: 'Anxiety-related profile across six areas',
     sourceType: SourceType.adaptedQuestionnaire,
-    sourceName: 'GAD-7 + MindCheck questions',
+    sourceName: 'GAD-7 + MindCurio questions',
     citation:
         'Questions 1–7: GAD-7. Spitzer, R. L., Kroenke, K., Williams, '
         'J. B. W., & Löwe, B. (2006). Archives of Internal Medicine, 166, '
         '1092–1097. Developed with an educational grant from Pfizer Inc. No '
         'permission required to reproduce, translate, display or distribute. '
-        'Questions 8–25: written for MindCheck. Because the questions are '
+        'Questions 8–25: written for MindCurio. Because the questions are '
         'scored together, the result is not a GAD-7 score.',
     timeframe: 'Over the last 2 weeks',
     keywords: <String>['gad', 'gad-7', 'stress', 'worry', 'overthinking'],
@@ -168,7 +168,7 @@ const List<AssessmentModel> assessmentCatalog = <AssessmentModel>[
         'Organization that asks about attention, organisation and '
         'restlessness in adults. A higher score means some experiences may '
         'be worth discussing with a qualified professional; it cannot tell '
-        'you whether you have ADHD. Part 2 adds MindCheck questions about '
+        'you whether you have ADHD. Part 2 adds MindCurio questions about '
         'everyday patterns such as focus, time management and impulsivity. '
         'They give you a separate profile and never change the screener score.',
     explores: <String>[
@@ -188,13 +188,13 @@ const List<AssessmentModel> assessmentCatalog = <AssessmentModel>[
     resultLabel: 'ASRS screening insight + everyday patterns profile',
     sourceType: SourceType.validatedScreener,
     sourceName: 'Adult ADHD Self-Report Scale (ASRS v1.1) Screener '
-        '+ MindCheck everyday patterns',
+        '+ MindCurio everyday patterns',
     citation:
         'Questions 1–6: Kessler, R. C., Adler, L., Ames, M., et al. (2005). '
         'The World Health Organization Adult ADHD Self-Report Scale (ASRS): '
         'a short screening scale for use in the general population. '
         'Psychological Medicine, 35(2), 245–256. Used unaltered, with the '
-        'official scoring. Questions 7–20: written for MindCheck, scored '
+        'official scoring. Questions 7–20: written for MindCurio, scored '
         'separately and not validated.',
     copyrightNotice:
         'ASRS v1.1 Screener © New York University and President and Fellows '
@@ -231,9 +231,9 @@ const List<AssessmentModel> assessmentCatalog = <AssessmentModel>[
     answerFormat: '5 options, from Strongly disagree to Strongly agree',
     resultLabel: 'Self-reported trait profile',
     sourceType: SourceType.selfReflection,
-    sourceName: 'MindCheck Autism-Related Traits Self-Reflection',
+    sourceName: 'MindCurio Autism-Related Traits Self-Reflection',
     citation:
-        'Original questions written for MindCheck. Not adapted from, and not '
+        'Original questions written for MindCurio. Not adapted from, and not '
         'equivalent to, any validated autism screening instrument.',
     keywords: <String>['autism', 'asd', 'sensory', 'routine', 'aspergers'],
   ),
@@ -265,9 +265,9 @@ const List<AssessmentModel> assessmentCatalog = <AssessmentModel>[
     answerFormat: '5 options, from Strongly disagree to Strongly agree',
     resultLabel: 'Narcissistic trait profile',
     sourceType: SourceType.selfReflection,
-    sourceName: 'MindCheck Narcissistic Traits Self-Reflection',
+    sourceName: 'MindCurio Narcissistic Traits Self-Reflection',
     citation:
-        'Original questions written for MindCheck. Not adapted from, and not '
+        'Original questions written for MindCurio. Not adapted from, and not '
         'equivalent to, the Narcissistic Personality Inventory or any other '
         'validated instrument.',
     keywords: <String>['narcissism', 'narcissist', 'ego', 'empathy'],
@@ -313,7 +313,7 @@ const List<AssessmentModel> assessmentCatalog = <AssessmentModel>[
     description:
         'Optimism is the general expectation that things will work out. '
         'Resilience is how you recover when they do not. This questionnaire '
-        'combines a public-domain optimism scale with MindCheck questions '
+        'combines a public-domain optimism scale with MindCurio questions '
         'about bouncing back, so you can see what supports you and what '
         'could use some care.',
     explores: <String>[
@@ -330,11 +330,11 @@ const List<AssessmentModel> assessmentCatalog = <AssessmentModel>[
     answerFormat: '5 options, from Very inaccurate to Very accurate',
     resultLabel: 'Optimism & resilience score + four-area profile',
     sourceType: SourceType.adaptedQuestionnaire,
-    sourceName: 'IPIP Optimism scale (10 items) + MindCheck bouncing back',
+    sourceName: 'IPIP Optimism scale (10 items) + MindCurio bouncing back',
     citation:
         'Questions 1–10: International Personality Item Pool (ipip.ori.org) '
         'Optimism scale, keyed to Scheier, Carver & Bridges (1994). Public '
-        'domain. Questions 11–20: written for MindCheck and not validated.',
+        'domain. Questions 11–20: written for MindCurio and not validated.',
     keywords: <String>['optimism', 'resilience', 'hope', 'outlook'],
   ),
   AssessmentModel(

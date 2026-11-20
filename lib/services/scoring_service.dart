@@ -15,7 +15,7 @@ import '../models/trait_score_model.dart';
 /// * tendencyIndex– Narcissistic traits: average of trait tendencies, with
 ///                  Empathy counted in reverse.
 /// * asrs         – ADHD: official ASRS v1.1 total (0–24), unchanged.
-///                  Extra MindCheck questions only add trait areas.
+///                  Extra MindCurio questions only add trait areas.
 /// * sum          – Low mood: the official PHQ-9 total (0–27).
 ///
 /// Any question marked `safety` (PHQ-9 question 9) answered above its
@@ -190,7 +190,7 @@ class ScoringService {
     int asrsItems = 0;
     for (final QuestionModel q in set.questions) {
       // Only the official ASRS questions (the ones with shading) count.
-      // MindCheck's extra "everyday patterns" questions never change it.
+      // MindCurio's extra "everyday patterns" questions never change it.
       final int? shadedFrom = q.shadedFromValue;
       if (shadedFrom == null) continue;
       asrsItems++;

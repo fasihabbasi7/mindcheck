@@ -108,7 +108,7 @@ class InfoScreen extends StatelessWidget {
       Icons.phone_android_rounded,
       'Everything stays on your device',
       'Your answers, results, journal entries, name and bookmarks are stored '
-          'only on this phone. MindCheck has no servers and no analytics.',
+          'only on this phone. MindCurio has no servers and no analytics.',
     ),
     (
       Icons.cloud_off_rounded,
@@ -132,7 +132,7 @@ class InfoScreen extends StatelessWidget {
     (
       Icons.info_outline_rounded,
       'Uninstalling',
-      'Uninstalling MindCheck removes all of its data from this phone. Your '
+      'Uninstalling MindCurio removes all of its data from this phone. Your '
           'phone\'s own backup settings may keep copies of app data; you can '
           'manage this in your system settings.',
     ),
@@ -142,15 +142,15 @@ class InfoScreen extends StatelessWidget {
       <(IconData, String, String)>[
     (
       Icons.self_improvement_rounded,
-      'What MindCheck is',
-      'MindCheck is an educational self-reflection app. Its questionnaires '
+      'What MindCurio is',
+      'MindCurio is an educational self-reflection app. Its questionnaires '
           'help you think about your personality, habits and emotions, and '
           'its reports describe your own answers at one moment in time.',
     ),
     (
       Icons.medical_information_outlined,
       'Not a medical or diagnostic tool',
-      'MindCheck cannot diagnose any condition, including autism, ADHD, '
+      'MindCurio cannot diagnose any condition, including autism, ADHD, '
           'anxiety disorders or personality disorders. Results are not a '
           'substitute for advice from a qualified professional.',
     ),
@@ -159,7 +159,7 @@ class InfoScreen extends StatelessWidget {
       'Where the questions come from',
       'Some assessments use published questionnaires (IPIP, Rosenberg, '
           'GAD-7 and the ASRS v1.1 screener), credited on each assessment. '
-          'Others use questions written for MindCheck and are clearly '
+          'Others use questions written for MindCurio and are clearly '
           'labelled as not scientifically validated.',
     ),
     (

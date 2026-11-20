@@ -86,7 +86,7 @@ void main() {
     expect(positive.overall!.bandTitle, contains('Well above'));
   });
 
-  test('ADHD extra MindCheck questions never change the ASRS score', () {
+  test('ADHD extra MindCurio questions never change the ASRS score', () {
     final QuestionSet set = loadSet('adhd');
     expect(set.length, 20);
     // ASRS questions (with shading) all "Never", extra questions all

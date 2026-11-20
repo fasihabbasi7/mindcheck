@@ -1,7 +1,7 @@
 {
   "id": "adhd",
   "version": 2,
-  "instructions": "Check the answer that best describes how you have felt and conducted yourself over the past 6 months. Questions 1-6 are the official ASRS v1.1 screener (intended for people aged 18 or older). Questions 7-20 are extra MindCheck questions about everyday patterns; they give you a separate profile and do not change the screener score.",
+  "instructions": "Check the answer that best describes how you have felt and conducted yourself over the past 6 months. Questions 1-6 are the official ASRS v1.1 screener (intended for people aged 18 or older). Questions 7-20 are extra MindCurio questions about everyday patterns; they give you a separate profile and do not change the screener score.",
   "prompt": "Over the past 6 months:",
   "scale": [
     {
@@ -122,7 +122,7 @@
       "text": "How often does your mind wander during conversations or reading, even when you want to pay attention?",
       "trait": "focus",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -130,7 +130,7 @@
       "text": "How often do you get distracted by things around you, such as sounds or notifications?",
       "trait": "focus",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -138,7 +138,7 @@
       "text": "How often do you start several tasks without finishing them?",
       "trait": "focus",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -146,7 +146,7 @@
       "text": "How often do you misplace everyday items like keys, your phone or documents?",
       "trait": "organisation",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -154,7 +154,7 @@
       "text": "How often does your room or workspace become cluttered faster than you can keep up with?",
       "trait": "organisation",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -162,7 +162,7 @@
       "text": "How often do you forget steps in routine tasks?",
       "trait": "organisation",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -170,7 +170,7 @@
       "text": "How often do you underestimate how long something will take?",
       "trait": "time_management",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -178,7 +178,7 @@
       "text": "How often are you late, even when you planned to be on time?",
       "trait": "time_management",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -186,7 +186,7 @@
       "text": "How often do you leave important tasks until the last minute?",
       "trait": "time_management",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -194,7 +194,7 @@
       "text": "How often do you interrupt others or finish their sentences?",
       "trait": "impulsivity",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -202,7 +202,7 @@
       "text": "How often do you make decisions or purchases on impulse that you later regret?",
       "trait": "impulsivity",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -210,7 +210,7 @@
       "text": "How often do you find it hard to wait your turn, for example in queues or conversations?",
       "trait": "impulsivity",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -218,7 +218,7 @@
       "text": "How often do you feel restless or find it hard to relax during quiet time?",
       "trait": "restlessness",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     },
     {
@@ -226,7 +226,7 @@
       "text": "How often do you need to keep moving, such as tapping, pacing or shifting position?",
       "trait": "restlessness",
       "reverse": false,
-      "source": "MindCheck",
+      "source": "MindCurio",
       "section": "Part 2 · Everyday patterns"
     }
   ],
@@ -234,6 +234,6 @@
     "Adult ADHD Self-Report Scale (ASRS v1.1) Screener. Kessler, R. C., et al. (2005). Psychological Medicine, 35(2), 245-256.",
     "Copyright © New York University and President and Fellows of Harvard College. All rights reserved.",
     "Shaded answers follow the official form. Scoring follows the Harvard 2024 update (Never = 0 to Very often = 4, total 0-24).",
-    "Questions 7-20: written for MindCheck. Scored separately; they never change the ASRS screener score."
+    "Questions 7-20: written for MindCurio. Scored separately; they never change the ASRS screener score."
   ]
 }

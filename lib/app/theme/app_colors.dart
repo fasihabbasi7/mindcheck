@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// All raw colours used in MindCheck live here.
+/// All raw colours used in MindCurio live here.
 ///
 /// Screens should NOT use these directly. Use `Theme.of(context).colorScheme`
 /// or `context.mind` (see app_theme.dart) so light and dark mode both work.

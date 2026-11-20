@@ -129,109 +129,109 @@
       "text": "I believe I deserve kindness and respect from others.",
       "trait": "worth",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_12",
       "text": "My worth does not depend on how well I perform.",
       "trait": "worth",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_13",
       "text": "I can accept my flaws without being harsh on myself.",
       "trait": "acceptance",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_14",
       "text": "I often wish I were a completely different person.",
       "trait": "acceptance",
       "reverse": true,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_15",
       "text": "I set boundaries when people treat me poorly.",
       "trait": "respect",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_16",
       "text": "I keep the promises I make to myself.",
       "trait": "respect",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_17",
       "text": "I put others' needs before my own, even when it harms me.",
       "trait": "respect",
       "reverse": true,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_18",
       "text": "I trust my own judgement when making decisions.",
       "trait": "confidence",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_19",
       "text": "I feel comfortable sharing my opinions in a group.",
       "trait": "confidence",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_20",
       "text": "I avoid new challenges because I expect to fail.",
       "trait": "confidence",
       "reverse": true,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_21",
       "text": "I can name things I am genuinely good at.",
       "trait": "perception",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_22",
       "text": "When I compare myself with others, I usually come out worse.",
       "trait": "perception",
       "reverse": true,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_23",
       "text": "When I make a mistake, I speak to myself harshly.",
       "trait": "selftalk",
       "reverse": true,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_24",
       "text": "I am quick to criticise myself.",
       "trait": "selftalk",
       "reverse": true,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "se_25",
       "text": "I can encourage myself when things get hard.",
       "trait": "selftalk",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     }
   ],
   "sources": [
     "Items 1-10: Rosenberg Self-Esteem Scale. Rosenberg, M. (1965). Society and the Adolescent Self-Image. Princeton University Press. Public domain.",
-    "Items 11-25: written for MindCheck."
+    "Items 11-25: written for MindCurio."
   ]
 }

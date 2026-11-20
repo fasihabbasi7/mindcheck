@@ -44,7 +44,7 @@
   "support": {
     "when": "below",
     "threshold": 25,
-    "text": "If you have been feeling low or hopeless for a while, it can really help to talk to someone you trust or a professional. You can also try the Low Mood check-in in MindCheck."
+    "text": "If you have been feeling low or hopeless for a while, it can really help to talk to someone you trust or a professional. You can also try the Low Mood check-in in MindCurio."
   },
   "traits": {
     "outlook": {
@@ -81,5 +81,5 @@
     "Resilience grows through support, rest and small wins, not by pushing through alone.",
     "A rough month can lower this score. Retake it after a while to see how it changes."
   ],
-  "note": "Your score is the average of all 20 answers, shown on a 0–100 scale. Questions 1–10 are the public-domain IPIP Optimism scale; questions 11–20 were written for MindCheck. The combined score is not validated and does not assess any condition."
+  "note": "Your score is the average of all 20 answers, shown on a 0–100 scale. Questions 1–10 are the public-domain IPIP Optimism scale; questions 11–20 were written for MindCurio. The combined score is not validated and does not assess any condition."
 }

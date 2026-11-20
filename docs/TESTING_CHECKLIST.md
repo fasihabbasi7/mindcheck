@@ -1,4 +1,4 @@
-# MindCheck – Testing Checklist
+# MindCurio – Testing Checklist
 
 Work through this list on a real phone before every release.
 Tick each box. If something fails, note the screen and what happened.

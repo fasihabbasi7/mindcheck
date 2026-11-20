@@ -29,19 +29,19 @@ enum SourceType {
   ),
 
   /// A published questionnaire combined with questions written for
-  /// MindCheck, scored together. The combined score is not validated.
+  /// MindCurio, scored together. The combined score is not validated.
   adaptedQuestionnaire(
     'Adapted questionnaire',
     'Combines a published questionnaire with extra questions written by '
-        'MindCheck, scored together. The combined score has not been '
+        'MindCurio, scored together. The combined score has not been '
         'scientifically validated and cannot screen for or diagnose any '
         'condition.',
   ),
 
-  /// Questions written for MindCheck. Not scientifically validated.
+  /// Questions written for MindCurio. Not scientifically validated.
   selfReflection(
-    'MindCheck self-reflection',
-    'Questions written by MindCheck to help you reflect. They have not been '
+    'MindCurio self-reflection',
+    'Questions written by MindCurio to help you reflect. They have not been '
         'scientifically validated and cannot screen for or diagnose any '
         'condition.',
   );

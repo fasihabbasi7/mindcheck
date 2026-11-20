@@ -17,7 +17,7 @@ class NavItem {
   final IconData selectedIcon;
 }
 
-/// The four main tabs of MindCheck.
+/// The four main tabs of MindCurio.
 const List<NavItem> mainNavItems = <NavItem>[
   NavItem(
     label: AppStrings.tabHome,

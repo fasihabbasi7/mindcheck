@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../app/theme/app_theme.dart';
 
-/// The MindCheck logo.
+/// The MindCurio logo.
 ///
 /// [markOnly] shows just the "mc" symbol; otherwise the symbol and the
-/// "mindcheck" wordmark. In dark mode the logo is drawn in a lighter
+/// "mindcurio" wordmark. In dark mode the logo is drawn in a lighter
 /// lavender so it stays readable on the dark background.
 class BrandLogo extends StatelessWidget {
   const BrandLogo({super.key, this.width = 240, this.markOnly = false});
@@ -14,7 +14,7 @@ class BrandLogo extends StatelessWidget {
   static const String _markAsset = 'assets/images/logo_mark.png';
 
   /// Width / height of each image file.
-  static const double _fullAspect = 2759 / 998;
+  static const double _fullAspect = 2597 / 998;
   static const double _markAspect = 1083 / 998;
 
   final double width;
@@ -25,7 +25,7 @@ class BrandLogo extends StatelessWidget {
     final double aspect = markOnly ? _markAspect : _fullAspect;
 
     return Semantics(
-      label: 'MindCheck',
+      label: 'MindCurio',
       image: true,
       excludeSemantics: true,
       child: Image.asset(

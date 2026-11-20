@@ -13,7 +13,7 @@ import '../../widgets/custom_button.dart';
 import '../../widgets/mind_background.dart';
 import 'onboarding_pages.dart';
 
-/// Three-page introduction: what MindCheck is, the assessments, and
+/// Three-page introduction: what MindCurio is, the assessments, and
 /// privacy + limitations. The user must accept the disclaimer on the last
 /// page before continuing. "Skip" jumps to that last page rather than
 /// bypassing it.

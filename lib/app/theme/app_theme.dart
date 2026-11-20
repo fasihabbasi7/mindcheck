@@ -5,7 +5,7 @@ import '../page_transitions.dart';
 import 'app_colors.dart';
 import 'app_text_styles.dart';
 
-/// Builds the light and dark [ThemeData] for MindCheck.
+/// Builds the light and dark [ThemeData] for MindCurio.
 class AppTheme {
   AppTheme._();
 

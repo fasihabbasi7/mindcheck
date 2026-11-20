@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../app/theme/app_colors.dart';
 import '../app/theme/app_theme.dart';
 
-/// MindCheck's main hero: the 3D brain image, brought to life in code.
+/// MindCurio's main hero: the 3D brain image, brought to life in code.
 ///
 /// The picture itself (assets/images/brain.webp) already contains the brain
 /// and its orbit ring. On top of it this widget adds:

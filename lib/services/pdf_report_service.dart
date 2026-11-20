@@ -34,7 +34,7 @@ class PdfReportService {
     final String date = result.completedAt.toIso8601String().substring(0, 10);
     await Printing.sharePdf(
       bytes: bytes,
-      filename: 'MindCheck-${assessment.id}-$date.pdf',
+      filename: 'MindCurio-${assessment.id}-$date.pdf',
     );
   }
 
@@ -57,7 +57,7 @@ class PdfReportService {
           mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
           children: <pw.Widget>[
             pw.Text(
-              _clean('MindCheck · for self-reflection, not diagnosis'),
+              _clean('MindCurio · for self-reflection, not diagnosis'),
               style: const pw.TextStyle(fontSize: 8, color: _muted),
             ),
             pw.Text(
@@ -78,7 +78,7 @@ class PdfReportService {
               crossAxisAlignment: pw.CrossAxisAlignment.start,
               children: <pw.Widget>[
                 pw.Text(
-                  'MINDCHECK REPORT',
+                  'MINDCURIO REPORT',
                   style: pw.TextStyle(
                     fontSize: 9,
                     color: _primary,

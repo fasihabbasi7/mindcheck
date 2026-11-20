@@ -1,11 +1,11 @@
 {
-    "name": "mind_check",
-    "short_name": "mind_check",
+    "name": "MindCurio",
+    "short_name": "MindCurio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "MindCurio - private, offline self-discovery assessments.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

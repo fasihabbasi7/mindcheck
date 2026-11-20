@@ -6,7 +6,7 @@ import '../app/theme/app_colors.dart';
 import '../app/theme/app_theme.dart';
 import '../utils/constants.dart';
 
-/// MindCheck's hero illustration: a glowing "neural sphere".
+/// MindCurio's hero illustration: a glowing "neural sphere".
 ///
 /// Layers (back to front):
 ///  1. a breathing glow
@@ -104,7 +104,7 @@ class _MindOrbState extends State<MindOrb> with SingleTickerProviderStateMixin {
 
     return Semantics(
       image: true,
-      label: 'MindCheck illustration',
+      label: 'MindCurio illustration',
       child: RepaintBoundary(
         child: SizedBox(
           width: box,

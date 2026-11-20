@@ -108,130 +108,130 @@
       "text": "Replaying conversations or events in your mind long after they happened",
       "trait": "worry",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_09",
       "text": "Thinking through everything that could go wrong before you do something",
       "trait": "worry",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_10",
       "text": "Second-guessing yourself so much that decisions feel hard",
       "trait": "worry",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_11",
       "text": "Feeling uneasy in situations that most people seem to find ordinary",
       "trait": "nervousness",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_12",
       "text": "Getting a nervous stomach before everyday tasks",
       "trait": "nervousness",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_13",
       "text": "Needing reassurance from others before you can feel calm",
       "trait": "nervousness",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_14",
       "text": "Noticing tight muscles in your neck, shoulders or jaw",
       "trait": "tension",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_15",
       "text": "A racing heart or shallow breathing when you feel stressed",
       "trait": "tension",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_16",
       "text": "Headaches or stomach aches when you are under pressure",
       "trait": "tension",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_17",
       "text": "Lying awake because your mind will not switch off",
       "trait": "relaxing",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_18",
       "text": "Finding it hard to enjoy free time because you feel you should be doing something",
       "trait": "relaxing",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_19",
       "text": "Feeling unable to settle even when nothing urgent needs doing",
       "trait": "relaxing",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_20",
       "text": "Avoiding places or situations because of how anxious they might make you feel",
       "trait": "apprehension",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_21",
       "text": "Expecting bad news when your phone rings or a message arrives",
       "trait": "apprehension",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_22",
       "text": "A sense of dread about the days ahead",
       "trait": "apprehension",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_23",
       "text": "Feeling overwhelmed by tasks you would normally manage",
       "trait": "stress",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_24",
       "text": "Snapping at people when you are under stress",
       "trait": "stress",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     },
     {
       "id": "anx_25",
       "text": "Struggling to concentrate because worries keep interrupting you",
       "trait": "stress",
       "reverse": false,
-      "source": "MindCheck"
+      "source": "MindCurio"
     }
   ],
   "sources": [
     "Items 1-7: GAD-7. Spitzer, Kroenke, Williams & Löwe (2006). Developed with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute.",
-    "Items 8-25: written for MindCheck."
+    "Items 8-25: written for MindCurio."
   ]
 }

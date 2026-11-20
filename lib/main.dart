@@ -26,7 +26,7 @@ Future<void> main() async {
         storageServiceProvider.overrideWithValue(storage),
         historyServiceProvider.overrideWithValue(history),
       ],
-      child: const MindCheckApp(),
+      child: const MindCurioApp(),
     ),
   );
 }

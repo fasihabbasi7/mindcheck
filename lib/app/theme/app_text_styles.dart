@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Typography for MindCheck.
+/// Typography for MindCurio.
 ///
 /// The design uses a light, airy look: big headlines are thin (w300) and
 /// important words are bold. See `AccentHeadline` in

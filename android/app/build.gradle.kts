@@ -28,7 +28,7 @@ android {
 
     defaultConfig {
         // Unique app ID on Google Play. Never change it after the first release.
-        applicationId = "com.mindcheck.app"
+        applicationId = "com.mindcurio.app"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
